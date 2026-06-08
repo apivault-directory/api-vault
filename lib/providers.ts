@@ -25,6 +25,7 @@ export const providers: Provider[] = [
       { date: "2026-05-12", type: "added", title: "Added Llama 3.3 70B Versatile" },
       { date: "2026-04-01", type: "updated", title: "Increased free-tier rate limits" },
     ],
+    social: { twitter: "https://x.com/GroqInc" }, // verified: linked from groq.com
     isFeatured: true, foundedYear: 2016, headquarters: "Mountain View, CA",
   },
   {
@@ -168,6 +169,7 @@ export const providers: Provider[] = [
     cons: ["Free tier has strict rate limits", "Vision models are newer"],
     useCases: ["Code generation", "GDPR-compliant apps", "Multilingual tasks"],
     changelog: [{ date: "2026-06-01", type: "added", title: "Mistral Large 3 released" }],
+    social: { twitter: "https://x.com/MistralAI" }, // verified: linked from mistral.ai
   },
   {
     slug: "replicate", name: "Replicate", logoText: "R", domain: "replicate.com",

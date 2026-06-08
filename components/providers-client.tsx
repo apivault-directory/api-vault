@@ -3,6 +3,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { ProviderCard } from "./provider-card";
+import { CategoryIcon } from "./category-icon";
 import type { Provider, Category } from "@/lib/types";
 
 const CATEGORIES: (Category | "All")[] = [
@@ -102,12 +103,19 @@ export function ProvidersClient({ providers }: { providers: Provider[] }) {
           <button
             key={f}
             onClick={() => setCategory(f)}
-            className={`px-3 py-1.5 border rounded-full text-[13px] transition-colors ${
+            className={`px-3 py-1.5 border rounded-full text-[13px] transition-colors inline-flex items-center gap-1.5 ${
               category === f
                 ? "bg-accent text-bg-0 border-accent font-medium"
                 : "border-line bg-bg-1 text-fg-1 hover:border-line-2 hover:text-fg-0"
             }`}
           >
+            {f !== "All" && (
+              <CategoryIcon
+                category={f}
+                size={12}
+                className={category === f ? "text-bg-0" : "text-fg-2"}
+              />
+            )}
             {f}
           </button>
         ))}

@@ -12,6 +12,15 @@ export interface CodeSnippet { language: Language; label: string; code: string; 
 
 export interface ChangelogEntry { date: string; type: ChangelogType; title: string; description?: string; }
 
+export interface ProviderSocial {
+  /** Only fill if link is verified from the provider's official website. Leave undefined if unverified. */
+  twitter?: string;
+  github?: string;
+  discord?: string;
+  linkedin?: string;
+  blog?: string;
+}
+
 export interface Provider {
   slug: string; name: string; logoText: string; domain: string;
   tagline: string; description: string; category: Category;
@@ -33,6 +42,8 @@ export interface Provider {
   pros: string[]; cons: string[]; useCases: string[];
   changelog: ChangelogEntry[];
   isFeatured?: boolean; foundedYear?: number; headquarters?: string;
+  /** Verified social links only — leave undefined if not confirmed from official source */
+  social?: ProviderSocial;
 }
 
 export interface Collection {

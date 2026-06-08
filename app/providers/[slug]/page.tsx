@@ -10,6 +10,8 @@ import { TrustScore } from "@/components/trust-score";
 import { GlanceCard } from "@/components/glance-card";
 import { ScoreBar } from "@/components/score-bar";
 import { ProviderLogo } from "@/components/provider-logo";
+import { CategoryIcon } from "@/components/category-icon";
+import { SocialLinks } from "@/components/social-links";
 import { providers } from "@/lib/providers";
 import { getProviderWithMetrics } from "@/lib/metrics";
 import { timeAgo, formatDate } from "@/lib/utils";
@@ -57,11 +59,18 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
                 </div>
               </div>
               <p className="text-fg-1 text-base max-w-2xl">{provider.tagline}</p>
-              {provider.headquarters && (
-                <p className="text-xs text-fg-2 font-mono mt-2">
-                  {provider.foundedYear && `est. ${provider.foundedYear} · `}{provider.headquarters}
-                </p>
-              )}
+              <div className="flex items-center gap-3 mt-2 flex-wrap">
+                <span className="flex items-center gap-1.5 text-xs text-fg-2 font-mono">
+                  <CategoryIcon category={provider.category} size={12} />
+                  {provider.category}
+                </span>
+                {provider.headquarters && (
+                  <span className="text-xs text-fg-2 font-mono">
+                    {provider.foundedYear && `est. ${provider.foundedYear} · `}{provider.headquarters}
+                  </span>
+                )}
+                <SocialLinks social={provider.social} />
+              </div>
             </div>
           </div>
           <TrustScore score={provider.apivaultScore} size="xl" />
