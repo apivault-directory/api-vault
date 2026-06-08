@@ -1,6 +1,0 @@
-<svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M11 11L7 16L11 21" stroke="#00FF88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21 11L25 16L21 21" stroke="#00FF88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M19 9L13 23" stroke="#00FF88" stroke-width="2.2" stroke-linecap="round"/>
-  <text x="36" y="22" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="17" font-weight="700" fill="#F5F6F7" letter-spacing="-0.5">API<tspan fill="#00FF88">Vault</tspan></text>
-</svg>

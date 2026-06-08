@@ -6,10 +6,11 @@ import { ButtonLink } from "@/components/button";
 import { TerminalDemo } from "@/components/terminal-demo";
 import { BentoGrid, BentoItem } from "@/components/bento-grid";
 import { SectionHeader } from "@/components/section-header";
-import { providers } from "@/lib/providers";
+import { getAllProvidersWithMetrics } from "@/lib/metrics";
 import Link from "next/link";
 
 export default function Home() {
+  const providers = getAllProvidersWithMetrics();
   const top = [...providers].sort((a, b) => b.apivaultScore - a.apivaultScore).slice(0, 8);
   const avg = Math.round(providers.reduce((a, p) => a + p.apivaultScore, 0) / providers.length);
   const noCardCount = providers.filter((p) => !p.requiresCreditCard).length;

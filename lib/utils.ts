@@ -6,7 +6,10 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function timeAgo(iso: string): string {
+  // "never" is a sentinel meaning the automated check has never run.
+  if (!iso || iso === "never") return "not yet verified";
   const date = new Date(iso);
+  if (isNaN(date.getTime())) return "not yet verified";
   const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
   if (seconds < 60) return "just now";
   const minutes = Math.floor(seconds / 60);

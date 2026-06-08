@@ -7,6 +7,8 @@ export const providers: Provider[] = [
     description: "Groq's LPU (Language Processing Unit) delivers hundreds of tokens per second, making it the fastest hosted inference for open-source LLMs. The free tier is generous, stable, and production-ready for low-latency applications.",
     category: "LLM", website: "https://groq.com", docsUrl: "https://console.groq.com/docs", apiUrl: "https://api.groq.com/openai/v1",
     apivaultScore: 96, reliabilityScore: 98, documentationScore: 94, freeTierScore: 95, popularityScore: 96,
+    docManualScore: 5, // excellent: dedicated docs, quickstart, multi-language examples, playground
+    githubRepo: "groq/groq-python",
     status: "online", lastVerified: "2026-06-07", freeTierSummary: "14,400 req/day · 30 req/min · no card",
     freeTierDetails: { monthlyRequests: "14,400 requests/day", rateLimit: "30 requests/minute", models: "Llama 3.3 70B, Mixtral, Gemma" },
     requiresCreditCard: false, requiresPhone: false,
@@ -31,6 +33,7 @@ export const providers: Provider[] = [
     description: "OpenRouter routes requests to every major LLM provider through a single OpenAI-compatible endpoint. The free tier rotates models and includes popular options like Llama 3.3 70B and several experimental models.",
     category: "LLM", website: "https://openrouter.ai", docsUrl: "https://openrouter.ai/docs", apiUrl: "https://openrouter.ai/api/v1",
     apivaultScore: 94, reliabilityScore: 96, documentationScore: 92, freeTierScore: 90, popularityScore: 98,
+    docManualScore: 4, // good: clear docs, examples; playground exists
     status: "online", lastVerified: "2026-06-07", freeTierSummary: "50 req/min · 20 req/day free models · no card",
     freeTierDetails: { rateLimit: "50 requests/minute", monthlyRequests: "20 free requests/day (per model)", models: "100+ models, several free" },
     requiresCreditCard: false, requiresPhone: false,

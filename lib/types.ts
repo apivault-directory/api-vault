@@ -16,8 +16,16 @@ export interface Provider {
   slug: string; name: string; logoText: string; domain: string;
   tagline: string; description: string; category: Category;
   website: string; docsUrl: string; apiUrl?: string;
+  // Manual baseline scores (0–100). Used as fallback when no automated data exists.
+  // Automated health checks + popularity fetches override these at build time via lib/metrics.ts.
   apivaultScore: number; reliabilityScore: number; documentationScore: number;
   freeTierScore: number; popularityScore: number;
+  // docManualScore: 1–5 human rating of documentation quality (1=minimal, 5=excellent).
+  // Stored explicitly so it's not confused with automated measurement.
+  docManualScore?: number;
+  // githubRepo: "owner/repo" of the provider's official SDK or main repo.
+  // Used by scripts/fetch-popularity.ts to pull star counts. Leave undefined if unclear.
+  githubRepo?: string;
   status: ProviderStatus; lastVerified: string; freeTierSummary: string;
   freeTierDetails: { monthlyRequests?: string; rateLimit?: string; monthlyTokens?: string; models?: string; };
   requiresCreditCard: boolean; requiresPhone: boolean;

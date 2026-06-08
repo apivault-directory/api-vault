@@ -10,7 +10,8 @@ import { TrustScore } from "@/components/trust-score";
 import { GlanceCard } from "@/components/glance-card";
 import { ScoreBar } from "@/components/score-bar";
 import { ProviderLogo } from "@/components/provider-logo";
-import { getProviderBySlug, providers } from "@/lib/providers";
+import { providers } from "@/lib/providers";
+import { getProviderWithMetrics } from "@/lib/metrics";
 import { timeAgo, formatDate } from "@/lib/utils";
 import { providerJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
@@ -20,7 +21,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const provider = getProviderBySlug(slug);
+  const provider = getProviderWithMetrics(slug);
   if (!provider) return {};
   return {
     title: `${provider.name} — Free API, ${provider.category}`,
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProviderPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const provider = getProviderBySlug(slug);
+  const provider = getProviderWithMetrics(slug);
   if (!provider) notFound();
 
   return (
@@ -46,7 +47,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       <section className="max-w-[1280px] mx-auto px-6 py-12">
         <div className="flex items-start justify-between gap-8 mb-8 flex-wrap">
           <div className="flex items-start gap-4 min-w-0 flex-1">
-            <ProviderLogo text={provider.logoText} size="xl" />
+            <ProviderLogo domain={provider.domain} text={provider.logoText} size="xl" />
             <div className="min-w-0">
               <div className="flex items-center gap-3 mb-2 flex-wrap">
                 <h1 className="font-display text-3xl font-semibold tracking-tight">{provider.name}</h1>
@@ -171,11 +172,14 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       <section className="max-w-[1280px] mx-auto px-6 pb-12">
         <h2 className="font-display text-2xl font-semibold tracking-tight mb-4">// Score breakdown</h2>
         <div className="bg-bg-1 border border-line rounded-lg p-6 space-y-5">
-          <ScoreBar label="Reliability" value={provider.reliabilityScore} weight="35%" />
-          <ScoreBar label="Free Tier Generosity" value={provider.freeTierScore} weight="30%" />
-          <ScoreBar label="Documentation" value={provider.documentationScore} weight="20%" />
-          <ScoreBar label="Popularity" value={provider.popularityScore} weight="15%" />
+          <ScoreBar label="Reliability (35%)" value={provider.reliabilityScore} weight={provider.lastVerified === "never" ? "manual baseline — run health-check to update" : `from ${timeAgo(provider.lastVerified)} health check`} />
+          <ScoreBar label="Free Tier Generosity (30%)" value={provider.freeTierScore} weight="computed from quota, no-CC, no-phone fields" />
+          <ScoreBar label="Documentation (20%)" value={provider.documentationScore} weight="human rating" />
+          <ScoreBar label="Popularity (15%)" value={provider.popularityScore} weight="GitHub stars (log-normalised), or manual baseline" />
         </div>
+        <p className="text-xs text-fg-3 font-mono mt-3">
+          Methodology: <a href="/methodology" className="text-fg-2 underline underline-offset-2 hover:text-accent">apivault.dev/methodology</a>
+        </p>
       </section>
 
       {provider.useCases.length > 0 && (

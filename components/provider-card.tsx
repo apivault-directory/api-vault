@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Provider } from "@/lib/types";
 import { StatusDot } from "./status-dot";
+import { ProviderLogo } from "./provider-logo";
 import { timeAgo } from "@/lib/utils";
 
 export function ProviderCard({ provider }: { provider: Provider }) {
@@ -11,10 +12,7 @@ export function ProviderCard({ provider }: { provider: Provider }) {
     >
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="w-10 h-10 rounded-md bg-bg-2 border border-line grid place-items-center font-mono font-semibold text-sm shrink-0 overflow-hidden relative">
-            <span className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,136,0.1),transparent_70%)]" />
-            <span className="relative">{provider.logoText}</span>
-          </div>
+          <ProviderLogo domain={provider.domain} text={provider.logoText} size="md" />
           <div className="min-w-0">
             <h3 className="text-base font-semibold truncate group-hover:text-accent transition-colors">{provider.name}</h3>
             <p className="text-xs text-fg-2 font-mono">{provider.category}</p>
@@ -48,7 +46,7 @@ export function ProviderCard({ provider }: { provider: Provider }) {
           <StatusDot status={provider.status} />
           <span className="text-fg-1 capitalize">{provider.status}</span>
         </div>
-        <span className="text-fg-2">Verified {timeAgo(provider.lastVerified)}</span>
+        <span className="text-fg-2">{timeAgo(provider.lastVerified)}</span>
       </div>
     </Link>
   );

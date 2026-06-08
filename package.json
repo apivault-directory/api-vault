@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "health-check": "tsx scripts/health-check.ts",
+    "fetch-popularity": "tsx scripts/fetch-popularity.ts",
+    "verify": "npm run fetch-popularity && npm run health-check"
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.0",
@@ -21,6 +24,7 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "tsx": "^4.19.2",
     "@types/node": "^20.17.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
