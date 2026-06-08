@@ -71,7 +71,6 @@ export function ProviderCard({ provider }: { provider: Provider }) {
           href={provider.website}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={(e) => e.stopPropagation()}
           className="inline-flex items-center gap-1 text-xs font-mono text-fg-2 hover:text-accent transition-colors"
         >
           Get API <ExternalLink size={10} />
