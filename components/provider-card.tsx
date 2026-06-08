@@ -1,0 +1,55 @@
+import Link from "next/link";
+import type { Provider } from "@/lib/types";
+import { StatusDot } from "./status-dot";
+import { timeAgo } from "@/lib/utils";
+
+export function ProviderCard({ provider }: { provider: Provider }) {
+  return (
+    <Link
+      href={`/providers/${provider.slug}`}
+      className="group block rounded-lg border border-line bg-bg-1 p-5 transition-all duration-200 hover:border-line-2 hover:bg-bg-2 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+    >
+      <div className="flex items-start justify-between gap-3 mb-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-10 h-10 rounded-md bg-bg-2 border border-line grid place-items-center font-mono font-semibold text-sm shrink-0 overflow-hidden relative">
+            <span className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,136,0.1),transparent_70%)]" />
+            <span className="relative">{provider.logoText}</span>
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-base font-semibold truncate group-hover:text-accent transition-colors">{provider.name}</h3>
+            <p className="text-xs text-fg-2 font-mono">{provider.category}</p>
+          </div>
+        </div>
+        <div className="text-right shrink-0">
+          <div className="text-2xl font-bold font-display text-accent leading-none">{provider.apivaultScore}</div>
+          <div className="text-[10px] text-fg-2 uppercase tracking-wider mt-1">/ 100</div>
+        </div>
+      </div>
+
+      <p className="text-sm text-fg-1 mb-4 line-clamp-2 leading-relaxed min-h-[2.5rem]">{provider.tagline}</p>
+
+      <div className="flex items-center gap-2 mb-4 flex-wrap min-h-[28px]">
+        <span className="font-mono text-xs text-fg-0 bg-bg-0 border border-line rounded px-2 py-1">{provider.freeTierSummary}</span>
+        {!provider.requiresCreditCard && (
+          <span className="text-xs text-accent flex items-center gap-1 font-mono"><span>✓</span> no card</span>
+        )}
+      </div>
+
+      {provider.tags.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mb-4 min-h-[24px]">
+          {provider.tags.slice(0, 3).map((tag) => (
+            <span key={tag} className="text-[11px] text-fg-1 bg-bg-0 border border-line rounded px-2 py-0.5">{tag}</span>
+          ))}
+        </div>
+      )}
+
+      <div className="flex items-center justify-between pt-3 border-t border-line text-xs">
+        <div className="flex items-center gap-1.5">
+          <StatusDot status={provider.status} />
+          <span className="text-fg-1 capitalize">{provider.status}</span>
+        </div>
+        <span className="text-fg-2">Verified {timeAgo(provider.lastVerified)}</span>
+      </div>
+    </Link>
+  );
+}

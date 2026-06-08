@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-bg-0 text-fg-0 antialiased overflow-x-hidden relative min-h-screen;
+  }
+}
+
+/* ===== CLEAN LIVING BACKGROUND =====
+   Three calm layers, nothing busy:
+   1. a very faint STATIC dot grid, masked so it fades downward
+   2. a single soft accent glow that breathes slowly (12s)
+   3. a barely-there grain to kill gradient banding             */
+
+.bg-dots {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.025) 1px, transparent 0);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 25%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 25%, transparent 85%);
+}
+
+.bg-glow {
+  position: fixed;
+  top: -22%;
+  left: 50%;
+  width: 1100px;
+  height: 760px;
+  z-index: -2;
+  pointer-events: none;
+  transform: translateX(-50%);
+  filter: blur(46px);
+  background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.15) 0%, transparent 62%);
+  animation: breathe 12s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; transform: translateX(-50%) scale(1); }
+  50%      { opacity: 0.85; transform: translateX(-50%) scale(1.06); }
+}
+
+.bg-noise {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.page { position: relative; z-index: 1; }
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0A0B0D; }
+::-webkit-scrollbar-thumb { background: #262A31; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #353B44; }
+
+/* ===== Selection ===== */
+::selection { background: rgba(0, 255, 136, 0.3); color: #F5F6F7; }
+
+/* ===== Prose for guides ===== */
+.prose { @apply text-fg-1 leading-relaxed; }
+.prose h2 { @apply font-display text-2xl font-semibold tracking-tight text-fg-0 mt-12 mb-4; }
+.prose h3 { @apply font-display text-xl font-semibold text-fg-0 mt-8 mb-3; }
+.prose p { @apply mb-4; }
+.prose a { @apply text-accent hover:underline; }
+.prose ul { @apply list-disc pl-6 mb-4 space-y-1.5; }
+.prose ol { @apply list-decimal pl-6 mb-4 space-y-1.5; }
+.prose code { @apply font-mono text-sm bg-bg-1 border border-line rounded px-1.5 py-0.5 text-accent; }
+.prose pre { @apply bg-bg-1 border border-line rounded-lg p-4 overflow-x-auto mb-6; }
+.prose pre code { @apply bg-transparent border-0 p-0 text-fg-0; }
+.prose blockquote { @apply border-l-2 border-accent pl-4 italic text-fg-1 my-6; }
+.prose strong { @apply text-fg-0 font-semibold; }
+
+/* ===== Respect reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .bg-glow { animation: none; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
