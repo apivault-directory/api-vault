@@ -15,92 +15,56 @@ export default function OGImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
           justifyContent: "space-between",
           padding: "72px 80px",
           fontFamily: "sans-serif",
-          position: "relative",
-          overflow: "hidden",
         }}
       >
-        {/* Background glow */}
-        <div
-          style={{
-            position: "absolute",
-            top: -200,
-            left: -100,
-            width: 700,
-            height: 700,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(0,255,136,0.12) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -150,
-            right: -100,
-            width: 500,
-            height: 500,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(0,255,136,0.07) 0%, transparent 70%)",
-          }}
-        />
-
-        {/* Logo row */}
+        {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          {/* Grid icon */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+            <div style={{ display: "flex", gap: 5 }}>
+              <div style={{ width: 20, height: 20, borderRadius: 5, background: "#00FF88" }} />
+              <div style={{ width: 20, height: 20, borderRadius: 5, background: "#00CC6A" }} />
+            </div>
+            <div style={{ display: "flex", gap: 5 }}>
+              <div style={{ width: 20, height: 20, borderRadius: 5, background: "#009950" }} />
+              <div style={{ width: 20, height: 20, borderRadius: 5, background: "#006633" }} />
+            </div>
+          </div>
+          <div style={{ display: "flex", gap: 0 }}>
+            <span style={{ fontSize: 36, fontWeight: 700, color: "#ffffff" }}>API</span>
+            <span style={{ fontSize: 36, fontWeight: 700, color: "#00FF88" }}>Vault</span>
+          </div>
+        </div>
+
+        {/* Main headline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-            <div style={{ display: "flex", gap: 4 }}>
-              <div style={{ width: 18, height: 18, borderRadius: 4, background: "#00FF88" }} />
-              <div style={{ width: 18, height: 18, borderRadius: 4, background: "#00CC6A" }} />
-            </div>
-            <div style={{ display: "flex", gap: 4 }}>
-              <div style={{ width: 18, height: 18, borderRadius: 4, background: "#009950" }} />
-              <div style={{ width: 18, height: 18, borderRadius: 4, background: "#006633" }} />
-            </div>
+            <span style={{ fontSize: 68, fontWeight: 800, color: "#ffffff", lineHeight: 1.1 }}>
+              The Developer Directory
+            </span>
+            <span style={{ fontSize: 68, fontWeight: 800, color: "#00FF88", lineHeight: 1.1 }}>
+              of Free AI APIs.
+            </span>
           </div>
-          <div style={{ display: "flex", alignItems: "baseline", gap: 2 }}>
-            <span style={{ fontSize: 32, fontWeight: 700, color: "#ffffff", letterSpacing: -1 }}>API</span>
-            <span style={{ fontSize: 32, fontWeight: 700, color: "#00FF88", letterSpacing: -1, fontFamily: "monospace" }}>Vault</span>
-          </div>
-        </div>
-
-        {/* Main text */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 20, flex: 1, justifyContent: "center" }}>
-          <div
-            style={{
-              fontSize: 64,
-              fontWeight: 700,
-              color: "#ffffff",
-              lineHeight: 1.05,
-              letterSpacing: -2,
-              maxWidth: 900,
-            }}
-          >
-            The Developer Directory
-            <br />
-            of{" "}
-            <span style={{ color: "#00FF88" }}>Free AI APIs.</span>
-          </div>
-          <div style={{ fontSize: 26, color: "#888", fontWeight: 400, maxWidth: 700 }}>
+          <span style={{ fontSize: 28, color: "#888888", fontWeight: 400 }}>
             Ranked transparently · Copy-paste code on every page.
-          </div>
+          </span>
         </div>
 
-        {/* Bottom pills */}
+        {/* Pills */}
         <div style={{ display: "flex", gap: 12 }}>
           {["LLM", "Image", "Speech", "Embeddings", "Search", "Video"].map((label) => (
             <div
               key={label}
               style={{
-                padding: "8px 18px",
-                borderRadius: 999,
-                border: "1px solid rgba(255,255,255,0.12)",
-                background: "rgba(255,255,255,0.05)",
-                color: "#aaa",
-                fontSize: 16,
-                fontFamily: "monospace",
+                padding: "10px 20px",
+                borderRadius: 50,
+                border: "1px solid #333333",
+                background: "#1a1a1a",
+                color: "#aaaaaa",
+                fontSize: 18,
               }}
             >
               {label}
