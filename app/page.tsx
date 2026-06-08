@@ -1,7 +1,6 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ProviderRow } from "@/components/provider-row";
-import { Ticker } from "@/components/ticker";
 import { ButtonLink } from "@/components/button";
 import { TerminalDemo } from "@/components/terminal-demo";
 import { BentoGrid, BentoItem } from "@/components/bento-grid";
@@ -65,7 +64,6 @@ export default function Home() {
       </section>
 
       <TerminalDemo />
-      <Ticker providers={providers} />
 
       {/* ── FEATURES ── */}
       <section className="max-w-[1280px] mx-auto px-6 py-20">
