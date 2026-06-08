@@ -25,7 +25,7 @@ export const providers: Provider[] = [
       { date: "2026-05-12", type: "added", title: "Added Llama 3.3 70B Versatile" },
       { date: "2026-04-01", type: "updated", title: "Increased free-tier rate limits" },
     ],
-    social: { twitter: "https://x.com/GroqInc" }, // verified: linked from groq.com
+    social: { twitter: "https://x.com/GroqInc", github: "https://github.com/groq" }, // verified: linked from groq.com
     isFeatured: true, foundedYear: 2016, headquarters: "Mountain View, CA",
   },
   {
@@ -51,6 +51,7 @@ export const providers: Provider[] = [
       { date: "2026-06-01", type: "added", title: "Added Claude 4 Sonnet" },
       { date: "2026-05-10", type: "free_tier_changed", title: "Free model pool updated" },
     ],
+    social: { twitter: "https://x.com/OpenRouterAI", github: "https://github.com/OpenRouterAI" }, // verified: openrouter.ai footer
     isFeatured: true, foundedYear: 2023, headquarters: "San Francisco, CA",
   },
   {
@@ -72,6 +73,7 @@ export const providers: Provider[] = [
     cons: ["Server sometimes overloaded", "Limited multimodal support"],
     useCases: ["Reasoning tasks", "Code generation", "Cost-sensitive apps"],
     changelog: [{ date: "2026-05-20", type: "added", title: "DeepSeek-V3.5 released" }],
+    social: { twitter: "https://x.com/deepseek_ai", github: "https://github.com/deepseek-ai" }, // verified: deepseek.com
     isFeatured: true, foundedYear: 2023, headquarters: "Hangzhou, China",
   },
   {
@@ -93,6 +95,7 @@ export const providers: Provider[] = [
     cons: ["Credits expire", "No permanent free tier"],
     useCases: ["Product imagery", "Game assets", "Real-time generation"],
     changelog: [{ date: "2026-06-02", type: "added", title: "Added Wan 2.1 video model" }],
+    social: { twitter: "https://x.com/fal_ai", github: "https://github.com/fal-ai" }, // verified: fal.ai
     isFeatured: true, foundedYear: 2022, headquarters: "San Francisco, CA",
   },
   {
@@ -113,6 +116,7 @@ export const providers: Provider[] = [
     cons: ["Credits expire in 3 months", "Some models slower than Groq"],
     useCases: ["OSS model hosting", "Fine-tuning", "Batch inference"],
     changelog: [{ date: "2026-05-18", type: "added", title: "Added Llama 3.3 70B Turbo" }],
+    social: { twitter: "https://x.com/togethercompute", github: "https://github.com/togethercomputer" }, // verified: together.ai
   },
   {
     slug: "deepgram", name: "Deepgram", logoText: "DG", domain: "deepgram.com",
@@ -132,6 +136,7 @@ export const providers: Provider[] = [
     cons: ["Free credit runs out", "Limited TTS"],
     useCases: ["Transcription apps", "Voice agents", "Call analytics"],
     changelog: [{ date: "2026-04-22", type: "added", title: "Nova-3 general availability" }],
+    social: { twitter: "https://x.com/DeepgramAI", github: "https://github.com/deepgram" }, // verified: deepgram.com
   },
   {
     slug: "huggingface", name: "HuggingFace Inference", logoText: "HF", domain: "huggingface.co",
@@ -151,6 +156,7 @@ export const providers: Provider[] = [
     cons: ["Serverless cold starts", "Rate limits on free tier"],
     useCases: ["Niche models", "Embeddings", "Open-source workflows"],
     changelog: [{ date: "2026-05-30", type: "updated", title: "Faster cold starts on PRO plan" }],
+    social: { twitter: "https://x.com/huggingface", github: "https://github.com/huggingface" }, // verified: huggingface.co
   },
   {
     slug: "mistral", name: "Mistral AI", logoText: "M", domain: "mistral.ai",
@@ -169,7 +175,7 @@ export const providers: Provider[] = [
     cons: ["Free tier has strict rate limits", "Vision models are newer"],
     useCases: ["Code generation", "GDPR-compliant apps", "Multilingual tasks"],
     changelog: [{ date: "2026-06-01", type: "added", title: "Mistral Large 3 released" }],
-    social: { twitter: "https://x.com/MistralAI" }, // verified: linked from mistral.ai
+    social: { twitter: "https://x.com/MistralAI", github: "https://github.com/mistralai" }, // verified: mistral.ai
   },
   {
     slug: "replicate", name: "Replicate", logoText: "R", domain: "replicate.com",
@@ -189,6 +195,7 @@ export const providers: Provider[] = [
     cons: ["Cold starts on free models", "Free credit runs out fast"],
     useCases: ["Niche fine-tunes", "Audio cloning", "Video generation"],
     changelog: [{ date: "2026-05-25", type: "free_tier_changed", title: "Reduced free public model quota" }],
+    social: { twitter: "https://x.com/replicatehq", github: "https://github.com/replicate" }, // verified: replicate.com
   },
   {
     slug: "elevenlabs", name: "ElevenLabs", logoText: "11", domain: "elevenlabs.io",
@@ -207,6 +214,7 @@ export const providers: Provider[] = [
     cons: ["Free tier 10k chars is small", "Cloning requires paid plan"],
     useCases: ["Audiobooks", "Voice agents", "Localization"],
     changelog: [{ date: "2026-05-15", type: "added", title: "Added Turbo v3 model" }],
+    social: { twitter: "https://x.com/elevenlabsio", github: "https://github.com/elevenlabs" }, // verified: elevenlabs.io
   },
   {
     slug: "jina", name: "Jina AI", logoText: "J", domain: "jina.ai",
@@ -244,6 +252,7 @@ export const providers: Provider[] = [
     cons: ["$1 free credit is small", "Smaller model catalog"],
     useCases: ["Real-time agents", "Function calling", "OSS inference"],
     changelog: [],
+    social: { twitter: "https://x.com/FireworksAI_HQ", github: "https://github.com/fw-ai" }, // verified: fireworks.ai
   },
   {
     slug: "voyage", name: "Voyage AI", logoText: "V", domain: "voyageai.com",
@@ -280,6 +289,7 @@ export const providers: Provider[] = [
     cons: ["More expensive than Deepgram", "No TTS"],
     useCases: ["Meeting transcription", "Call centers", "Podcast search"],
     changelog: [],
+    social: { twitter: "https://x.com/AssemblyAI", github: "https://github.com/AssemblyAI" }, // verified: assemblyai.com
   },
   {
     slug: "leonardo", name: "Leonardo.AI", logoText: "L", domain: "leonardo.ai",
@@ -316,6 +326,7 @@ export const providers: Provider[] = [
     cons: ["Credits expire", "Smaller context than full LLMs"],
     useCases: ["Research agents", "News summarization", "Fact-checking"],
     changelog: [],
+    social: { twitter: "https://x.com/perplexity_ai" }, // verified: perplexity.ai
   },
   {
     slug: "stability", name: "Stability AI", logoText: "S", domain: "stability.ai",
@@ -388,6 +399,7 @@ export const providers: Provider[] = [
     cons: ["Smaller free tier", "No vision model"],
     useCases: ["Enterprise search", "RAG", "Classification"],
     changelog: [],
+    social: { twitter: "https://x.com/cohere", github: "https://github.com/cohere-ai" }, // verified: cohere.com
   },
   {
     slug: "gemini", name: "Google Gemini", logoText: "G", domain: "ai.google.dev",
@@ -431,6 +443,7 @@ export const providers: Provider[] = [
     cons: ["Limited model selection", "Daily token caps on free tier"],
     useCases: ["Real-time streaming", "Low-latency agents", "Interactive apps"],
     changelog: [{ date: "2026-03-15", type: "added", title: "Llama 3.3 70B on Cerebras Inference" }],
+    social: { twitter: "https://x.com/CerebrasSystems", github: "https://github.com/Cerebras" }, // verified: cerebras.ai
     isFeatured: true, foundedYear: 2016, headquarters: "Sunnyvale, CA",
   },
   {
@@ -450,6 +463,7 @@ export const providers: Provider[] = [
     cons: ["Smaller ecosystem", "Fewer docs than big players"],
     useCases: ["Large model inference", "Reasoning tasks", "Research"],
     changelog: [{ date: "2026-04-10", type: "added", title: "Added DeepSeek-R1 to free tier" }],
+    social: { twitter: "https://x.com/SambaNovaAI" }, // verified: sambanova.ai
     foundedYear: 2017, headquarters: "Palo Alto, CA",
   },
   {

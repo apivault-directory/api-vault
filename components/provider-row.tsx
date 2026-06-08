@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Provider } from "@/lib/types";
 import { StatusDot } from "./status-dot";
 import { ProviderLogo } from "./provider-logo";
-import { scoreColor } from "@/lib/utils";
+import { TrustScoreBadge } from "./trust-score-badge";
 
 export function ProviderRow({ provider }: { provider: Provider }) {
   return (
@@ -17,12 +17,11 @@ export function ProviderRow({ provider }: { provider: Provider }) {
           {provider.name}
         </h3>
         <div className="text-xs text-fg-2 font-mono mb-1.5">{provider.category}</div>
-        <span className="inline-block px-2 py-0.5 bg-bg-0 border border-line rounded text-[11px] font-mono text-fg-1">{provider.freeTierSummary}</span>
+        <span className="inline-block px-2 py-0.5 bg-bg-0 border border-line rounded text-[11px] font-mono text-fg-1">
+          {provider.freeTierSummary}
+        </span>
       </div>
-      <div className="text-right">
-        <div className={`font-display text-2xl font-semibold leading-none ${scoreColor(provider.apivaultScore)}`}>{provider.apivaultScore}</div>
-        <div className="text-[10px] text-fg-2 uppercase tracking-wider mt-1">trust</div>
-      </div>
+      <TrustScoreBadge provider={provider} />
     </Link>
   );
 }
