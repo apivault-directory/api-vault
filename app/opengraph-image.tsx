@@ -84,7 +84,7 @@ export default function OGImage() {
             <span style={{ color: "#00FF88" }}>Free AI APIs.</span>
           </div>
           <div style={{ fontSize: 26, color: "#888", fontWeight: 400, maxWidth: 700 }}>
-            65+ APIs · Ranked transparently · Copy-paste code on every page.
+            Ranked transparently · Copy-paste code on every page.
           </div>
         </div>
 
