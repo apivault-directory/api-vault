@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  Zap, RefreshCw, CreditCard, ImageIcon, Mic, Gem,
+  Clapperboard, Globe, Search, Bot, Layers, ArrowRight,
+  type LucideProps,
+} from "lucide-react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { ProviderLogo } from "@/components/provider-logo";
 import { collections } from "@/lib/collections";
 import { getProvidersBySlugs } from "@/lib/providers";
-import { ArrowRight, Layers } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Collections",
@@ -12,47 +17,61 @@ export const metadata: Metadata = {
   alternates: { canonical: "/collections" },
 };
 
-const ACCENT_COLORS: Record<string, { border: string; glow: string; tag: string }> = {
-  "best-for-hackathons":   { border: "border-[rgba(0,255,136,0.3)]",  glow: "shadow-[0_0_40px_rgba(0,255,136,0.08)]",  tag: "bg-[rgba(0,255,136,0.1)] text-accent" },
-  "openai-alternatives":   { border: "border-[rgba(99,179,237,0.3)]",  glow: "shadow-[0_0_40px_rgba(99,179,237,0.08)]", tag: "bg-[rgba(99,179,237,0.1)] text-blue-300" },
-  "no-credit-card":        { border: "border-[rgba(154,230,180,0.3)]", glow: "shadow-[0_0_40px_rgba(154,230,180,0.08)]",tag: "bg-[rgba(154,230,180,0.1)] text-green-300" },
-  "best-image-apis":       { border: "border-[rgba(246,173,85,0.3)]",  glow: "shadow-[0_0_40px_rgba(246,173,85,0.08)]", tag: "bg-[rgba(246,173,85,0.1)] text-orange-300" },
-  "speech-stack":          { border: "border-[rgba(183,148,244,0.3)]", glow: "shadow-[0_0_40px_rgba(183,148,244,0.08)]",tag: "bg-[rgba(183,148,244,0.1)] text-purple-300" },
-  "hidden-gems":           { border: "border-[rgba(99,179,237,0.3)]",  glow: "shadow-[0_0_40px_rgba(99,179,237,0.08)]", tag: "bg-[rgba(99,179,237,0.1)] text-blue-300" },
-  "video-generation":      { border: "border-[rgba(252,129,74,0.3)]",  glow: "shadow-[0_0_40px_rgba(252,129,74,0.08)]", tag: "bg-[rgba(252,129,74,0.1)] text-orange-400" },
-  "chinese-ai-apis":       { border: "border-[rgba(252,68,53,0.3)]",   glow: "shadow-[0_0_40px_rgba(252,68,53,0.08)]",  tag: "bg-[rgba(252,68,53,0.1)] text-red-400" },
-  "rag-stack":             { border: "border-[rgba(0,255,136,0.3)]",   glow: "shadow-[0_0_40px_rgba(0,255,136,0.08)]",  tag: "bg-[rgba(0,255,136,0.1)] text-accent" },
-  "agent-platforms":       { border: "border-[rgba(183,148,244,0.3)]", glow: "shadow-[0_0_40px_rgba(183,148,244,0.08)]",tag: "bg-[rgba(183,148,244,0.1)] text-purple-300" },
+// ── Icon map ─────────────────────────────────────────────────────────────────
+const ICON_MAP: Record<string, React.ElementType<LucideProps>> = {
+  Zap, RefreshCw, CreditCard, ImageIcon, Mic, Gem,
+  Clapperboard, Globe, Search, Bot,
 };
 
-function ProviderDots({ slugs }: { slugs: string[] }) {
-  const providers = getProvidersBySlugs(slugs.slice(0, 6));
+function CollectionIcon({ name, size = 22, className = "" }: { name: string; size?: number; className?: string }) {
+  const Icon = ICON_MAP[name];
+  if (!Icon) return null;
+  return <Icon size={size} className={className} />;
+}
+
+// ── Accent colours per collection ────────────────────────────────────────────
+const ACCENT: Record<string, { border: string; tag: string; iconBg: string; iconColor: string }> = {
+  "best-for-hackathons":  { border: "border-[rgba(0,255,136,0.3)]",  tag: "bg-[rgba(0,255,136,0.12)] text-accent",       iconBg: "bg-[rgba(0,255,136,0.1)]",  iconColor: "text-accent" },
+  "openai-alternatives":  { border: "border-[rgba(99,179,237,0.3)]",  tag: "bg-[rgba(99,179,237,0.12)] text-blue-300",    iconBg: "bg-[rgba(99,179,237,0.1)]",  iconColor: "text-blue-300" },
+  "no-credit-card":       { border: "border-[rgba(154,230,180,0.3)]", tag: "bg-[rgba(154,230,180,0.12)] text-green-300",  iconBg: "bg-[rgba(154,230,180,0.1)]", iconColor: "text-green-300" },
+  "best-image-apis":      { border: "border-[rgba(246,173,85,0.3)]",  tag: "bg-[rgba(246,173,85,0.12)] text-orange-300",  iconBg: "bg-[rgba(246,173,85,0.1)]",  iconColor: "text-orange-300" },
+  "speech-stack":         { border: "border-[rgba(183,148,244,0.3)]", tag: "bg-[rgba(183,148,244,0.12)] text-purple-300", iconBg: "bg-[rgba(183,148,244,0.1)]", iconColor: "text-purple-300" },
+  "hidden-gems":          { border: "border-[rgba(99,179,237,0.3)]",  tag: "bg-[rgba(99,179,237,0.12)] text-blue-300",    iconBg: "bg-[rgba(99,179,237,0.1)]",  iconColor: "text-blue-300" },
+  "video-generation":     { border: "border-[rgba(252,129,74,0.3)]",  tag: "bg-[rgba(252,129,74,0.12)] text-orange-400",  iconBg: "bg-[rgba(252,129,74,0.1)]",  iconColor: "text-orange-400" },
+  "chinese-ai-apis":      { border: "border-[rgba(252,68,53,0.3)]",   tag: "bg-[rgba(252,68,53,0.12)] text-red-400",      iconBg: "bg-[rgba(252,68,53,0.1)]",   iconColor: "text-red-400" },
+  "rag-stack":            { border: "border-[rgba(0,255,136,0.3)]",   tag: "bg-[rgba(0,255,136,0.12)] text-accent",       iconBg: "bg-[rgba(0,255,136,0.1)]",   iconColor: "text-accent" },
+  "agent-platforms":      { border: "border-[rgba(183,148,244,0.3)]", tag: "bg-[rgba(183,148,244,0.12)] text-purple-300", iconBg: "bg-[rgba(183,148,244,0.1)]", iconColor: "text-purple-300" },
+};
+
+const DEFAULT_ACCENT = ACCENT["best-for-hackathons"];
+
+// ── Provider logo row ─────────────────────────────────────────────────────────
+function ProviderAvatars({ slugs }: { slugs: string[] }) {
+  const providers = getProvidersBySlugs(slugs.slice(0, 5));
+  const extra = slugs.length - 5;
   return (
     <div className="flex items-center -space-x-2">
       {providers.map((p) => (
-        <div
-          key={p.slug}
-          title={p.name}
-          className="w-7 h-7 rounded-full bg-bg-2 border border-line flex items-center justify-center text-[10px] font-mono font-bold text-fg-1 shrink-0"
-        >
-          {p.logoText.slice(0, 2)}
+        <div key={p.slug} className="ring-2 ring-bg-1 rounded-full shrink-0">
+          <ProviderLogo domain={p.domain} text={p.logoText} size="sm" />
         </div>
       ))}
-      {slugs.length > 6 && (
-        <div className="w-7 h-7 rounded-full bg-bg-2 border border-line flex items-center justify-center text-[9px] font-mono text-fg-2 shrink-0">
-          +{slugs.length - 6}
+      {extra > 0 && (
+        <div className="w-9 h-9 rounded-full ring-2 ring-bg-1 bg-bg-2 border border-line flex items-center justify-center text-[10px] font-mono text-fg-2 shrink-0">
+          +{extra}
         </div>
       )}
     </div>
   );
 }
 
+// ── Page ──────────────────────────────────────────────────────────────────────
 export default function CollectionsPage() {
   const published = collections.filter((c) => c.isPublished);
-  const totalApis  = published.reduce((acc, c) => acc + c.providerSlugs.length, 0);
+  const totalApis = published.reduce((acc, c) => acc + c.providerSlugs.length, 0);
   const [featured, ...rest] = published;
   const featuredItems = getProvidersBySlugs(featured.providerSlugs);
-  const ac = ACCENT_COLORS[featured.slug] ?? ACCENT_COLORS["best-for-hackathons"];
+  const fac = ACCENT[featured.slug] ?? DEFAULT_ACCENT;
 
   return (
     <>
@@ -78,35 +97,33 @@ export default function CollectionsPage() {
       <section className="max-w-[1280px] mx-auto px-6 pb-8">
         <Link
           href={`/collections/${featured.slug}`}
-          className={`group block rounded-xl border ${ac.border} bg-bg-1 p-8 transition-all duration-300 hover:bg-bg-2 hover:-translate-y-0.5 ${ac.glow} relative overflow-hidden`}
+          className={`group block rounded-xl border ${fac.border} bg-bg-1 p-8 transition-all duration-300 hover:bg-bg-2 hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)] relative overflow-hidden`}
         >
-          {/* bg shimmer */}
           <span className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,255,136,0.05),transparent_60%)] pointer-events-none" />
-
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative">
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <span className={`text-[11px] font-mono px-2.5 py-1 rounded-full ${ac.tag}`}>
-                  Featured collection
-                </span>
+              <div className="flex items-center gap-3 mb-5">
+                <span className={`text-[11px] font-mono px-2.5 py-1 rounded-full ${fac.tag}`}>Featured collection</span>
                 <span className="text-fg-2 text-sm font-mono">{featured.subtitle}</span>
               </div>
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-4xl">{featured.icon}</span>
+              <div className="flex items-center gap-4 mb-3">
+                <div className={`w-12 h-12 rounded-xl ${fac.iconBg} flex items-center justify-center shrink-0`}>
+                  <CollectionIcon name={featured.icon} size={24} className={fac.iconColor} />
+                </div>
                 <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight group-hover:text-accent transition-colors">
                   {featured.title}
                 </h2>
               </div>
-              <p className="text-fg-1 text-base max-w-[560px] leading-relaxed mb-6">
+              <p className="text-fg-1 text-base max-w-[560px] leading-relaxed mb-6 ml-16">
                 {featured.description}
               </p>
-              <div className="flex items-center gap-4">
-                <ProviderDots slugs={featured.providerSlugs} />
+              <div className="flex items-center gap-4 ml-16">
+                <ProviderAvatars slugs={featured.providerSlugs} />
                 <span className="text-sm font-mono text-fg-2">{featuredItems.length} APIs</span>
               </div>
             </div>
-            <div className="flex flex-col items-end gap-3 shrink-0">
-              <div className="font-display text-6xl font-bold text-accent opacity-20 leading-none select-none">
+            <div className="flex flex-col items-end gap-4 shrink-0">
+              <div className="font-display text-7xl font-bold text-accent opacity-10 leading-none select-none">
                 {featuredItems.length}
               </div>
               <div className="inline-flex items-center gap-2 px-5 h-10 rounded-md bg-accent text-bg-0 text-sm font-medium group-hover:bg-accent-dim transition-colors">
@@ -122,36 +139,36 @@ export default function CollectionsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {rest.map((c) => {
             const items = getProvidersBySlugs(c.providerSlugs);
-            const colors = ACCENT_COLORS[c.slug] ?? ACCENT_COLORS["rag-stack"];
+            const ac = ACCENT[c.slug] ?? DEFAULT_ACCENT;
             return (
               <Link
                 key={c.slug}
                 href={`/collections/${c.slug}`}
                 className="group relative flex flex-col bg-bg-1 border border-line rounded-xl p-6 transition-all duration-200 hover:border-[rgba(0,255,136,0.2)] hover:bg-bg-2 hover:-translate-y-0.5 hover:shadow-[0_4px_24px_rgba(0,0,0,0.3)] overflow-hidden"
               >
-                <span className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_top_right,rgba(0,255,136,0.04),transparent_70%)] pointer-events-none" />
+                <span className="absolute top-0 right-0 w-40 h-40 bg-[radial-gradient(circle_at_top_right,rgba(0,255,136,0.03),transparent_70%)] pointer-events-none" />
 
                 {/* icon + subtitle */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{c.icon}</div>
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${colors.tag}`}>
+                <div className="flex items-start justify-between mb-5">
+                  <div className={`w-11 h-11 rounded-xl ${ac.iconBg} flex items-center justify-center`}>
+                    <CollectionIcon name={c.icon} size={20} className={ac.iconColor} />
+                  </div>
+                  <span className={`text-[10px] font-mono px-2 py-1 rounded-full ${ac.tag}`}>
                     {c.subtitle}
                   </span>
                 </div>
 
-                {/* title */}
+                {/* title + desc */}
                 <h3 className="font-display text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
                   {c.title}
                 </h3>
-
-                {/* description */}
                 <p className="text-sm text-fg-1 leading-relaxed flex-1 mb-5 line-clamp-3">
                   {c.description}
                 </p>
 
-                {/* footer */}
+                {/* footer: logos + count */}
                 <div className="flex items-center justify-between pt-4 border-t border-line">
-                  <ProviderDots slugs={c.providerSlugs} />
+                  <ProviderAvatars slugs={c.providerSlugs} />
                   <span className="text-xs font-mono text-fg-2 group-hover:text-accent transition-colors flex items-center gap-1">
                     {items.length} APIs <ArrowRight size={11} />
                   </span>
