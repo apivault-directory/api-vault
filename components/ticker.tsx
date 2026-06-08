@@ -1,7 +1,11 @@
 import { StatusDot } from "./status-dot";
-import { providers } from "@/lib/providers";
+import type { Provider } from "@/lib/types";
 
-export function Ticker() {
+interface TickerProps {
+  providers: Provider[];
+}
+
+export function Ticker({ providers }: TickerProps) {
   // Show all providers, doubled for seamless loop
   const items = [...providers].sort((a, b) => b.apivaultScore - a.apivaultScore);
   const doubled = [...items, ...items];

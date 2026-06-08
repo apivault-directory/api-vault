@@ -6,7 +6,9 @@ import { ButtonLink } from "@/components/button";
 import { TerminalDemo } from "@/components/terminal-demo";
 import { BentoGrid, BentoItem } from "@/components/bento-grid";
 import { SectionHeader } from "@/components/section-header";
+import { CategoryIcon } from "@/components/category-icon";
 import { getAllProvidersWithMetrics } from "@/lib/metrics";
+import type { Category } from "@/lib/types";
 import Link from "next/link";
 
 export default function Home() {
@@ -14,7 +16,11 @@ export default function Home() {
   const top = [...providers].sort((a, b) => b.apivaultScore - a.apivaultScore).slice(0, 8);
   const avg = Math.round(providers.reduce((a, p) => a + p.apivaultScore, 0) / providers.length);
   const noCardCount = providers.filter((p) => !p.requiresCreditCard).length;
-  const categories = [...new Set(providers.map((p) => p.category))].length;
+
+  const allCategories: Category[] = ["LLM", "Image", "Speech", "Embeddings", "Search", "Video", "Code", "Vision"];
+  const categoryStats = allCategories
+    .map((label) => ({ label, count: providers.filter((p) => p.category === label).length }))
+    .filter((c) => c.count >= 2); // hide categories with only 1 provider — feels incomplete
 
   return (
     <>
@@ -24,7 +30,7 @@ export default function Home() {
       <section className="max-w-[1280px] mx-auto px-6 pt-20 pb-16 text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-line-2 rounded-full text-xs font-mono text-fg-1 bg-bg-1 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#00FF88] animate-pulse-slow" />
-          <span>{providers.length} APIs tracked · verified weekly</span>
+          <span>{providers.length} APIs · curated &amp; ranked transparently</span>
         </div>
 
         <h1 className="font-display text-[clamp(40px,6vw,72px)] font-semibold leading-[1.05] tracking-[-0.04em] mb-5">
@@ -39,7 +45,7 @@ export default function Home() {
         </h1>
 
         <p className="text-lg text-fg-1 leading-relaxed max-w-[640px] mx-auto mb-8">
-          Every API on APIVault is verified, ranked by a transparent trust score, and ships with copy-paste code.
+          Every API on APIVault is curated, ranked by a transparent trust score, and ships with copy-paste code.
           No broken links. No fake free tiers.
         </p>
 
@@ -47,26 +53,26 @@ export default function Home() {
           <ButtonLink href="/providers" rightIcon={<span>→</span>}>
             Explore {providers.length} APIs
           </ButtonLink>
-          <ButtonLink href="/methodology" variant="ghost">How we verify</ButtonLink>
+          <ButtonLink href="/methodology" variant="ghost">How we rank</ButtonLink>
         </div>
 
         <div className="flex gap-8 sm:gap-10 justify-center pt-8 border-t border-line max-w-[720px] mx-auto flex-wrap">
           <Stat num={String(providers.length)} label="APIs tracked" />
           <Stat num={String(noCardCount)} label="No credit card" />
           <Stat num={String(avg)} suffix="/100" label="Avg. trust score" />
-          <Stat num={String(categories)} label="Categories" />
+          <Stat num={String(categoryStats.length)} label="Categories" />
         </div>
       </section>
 
       <TerminalDemo />
-      <Ticker />
+      <Ticker providers={providers} />
 
       {/* ── FEATURES ── */}
       <section className="max-w-[1280px] mx-auto px-6 py-20">
         <SectionHeader title="// What makes it different" comment="not another list of links" />
         <BentoGrid>
-          <BentoItem tag="// 01 verification" title="Every API is checked. Weekly." className="md:col-span-4">
-            Automated health checks + manual sign-up tests. When a free tier disappears, you know first.
+          <BentoItem tag="// 01 curation" title="Every API is hand-checked." className="md:col-span-4">
+            Each provider is manually reviewed: we sign up, test the free tier, and document what actually works — not what their marketing page claims.
           </BentoItem>
           <BentoItem tag="// 02 trust score" title="A 0–100 score, with the math shown." className="md:col-span-5">
             Reliability (35%) + documentation (20%) + free-tier generosity (30%) + popularity (15%). No black-box rankings.
@@ -107,27 +113,22 @@ export default function Home() {
 
       {/* ── CATEGORY QUICK LINKS ── */}
       <section className="max-w-[1280px] mx-auto px-6 pb-20">
-        <SectionHeader title="// Browse by category" comment="8 categories" />
+        <SectionHeader title="// Browse by category" comment={`${categoryStats.length} categories`} />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {[
-            { label: "LLM", icon: "⚡", count: providers.filter(p => p.category === "LLM").length },
-            { label: "Image", icon: "🎨", count: providers.filter(p => p.category === "Image").length },
-            { label: "Speech", icon: "🎤", count: providers.filter(p => p.category === "Speech").length },
-            { label: "Embeddings", icon: "🔢", count: providers.filter(p => p.category === "Embeddings").length },
-            { label: "Search", icon: "🔍", count: providers.filter(p => p.category === "Search").length },
-            { label: "Video", icon: "🎬", count: providers.filter(p => p.category === "Video").length },
-            { label: "Code", icon: "💻", count: providers.filter(p => p.category === "Code").length },
-            { label: "Vision", icon: "👁️", count: providers.filter(p => p.category === "Vision").length },
-          ].filter(c => c.count > 0).map((cat) => (
+          {categoryStats.map((cat) => (
             <Link
               key={cat.label}
               href={`/providers?category=${cat.label}`}
               className="group flex items-center gap-3 p-4 bg-bg-1 border border-line rounded-lg hover:border-accent hover:bg-bg-2 transition-all"
             >
-              <span className="text-2xl">{cat.icon}</span>
+              <span className="text-accent shrink-0">
+                <CategoryIcon category={cat.label as Category} size={22} />
+              </span>
               <div>
                 <div className="text-sm font-semibold group-hover:text-accent transition-colors">{cat.label}</div>
-                <div className="text-xs text-fg-2 font-mono">{cat.count} APIs</div>
+                <div className="text-xs text-fg-2 font-mono">
+                  {cat.count} {cat.count === 1 ? "API" : "APIs"}
+                </div>
               </div>
             </Link>
           ))}

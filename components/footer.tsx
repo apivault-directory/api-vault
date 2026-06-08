@@ -2,8 +2,6 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { NewsletterForm } from "./newsletter-form";
 
-const GITHUB_URL = "https://github.com/apivault/apivault";
-
 const cols = [
   {
     title: "Browse",
@@ -26,7 +24,6 @@ const cols = [
     title: "Contribute",
     links: [
       { label: "Submit an API", href: "/submit" },
-      { label: "GitHub", href: GITHUB_URL },
       { label: "Methodology", href: "/methodology" },
     ],
   },
@@ -43,7 +40,7 @@ export function Footer() {
             <Logo />
           </Link>
           <p className="text-fg-2 text-[13px] max-w-[320px] leading-relaxed mb-6">
-            The developer directory of free AI APIs. Verified weekly. Ranked transparently.
+            The developer directory of free AI APIs. Curated &amp; ranked transparently.
           </p>
           <div className="space-y-2">
             <div className="font-mono text-[11px] text-fg-2 uppercase tracking-wider">
@@ -79,7 +76,7 @@ export function Footer() {
         <span>© {currentYear} APIVault — made for developers</span>
         <span className="flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_6px_#00FF88] inline-block" />
-          verified weekly · open source
+          curated &amp; ranked · no fake data
         </span>
       </div>
     </footer>
