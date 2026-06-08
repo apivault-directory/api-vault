@@ -1,12 +1,27 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import {
+  Zap, RefreshCw, CreditCard, ImageIcon, Mic, Gem,
+  Clapperboard, Globe, Search, Bot, ArrowLeft, Layers,
+  type LucideProps,
+} from "lucide-react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { ProviderCard } from "@/components/provider-card";
 import { collections } from "@/lib/collections";
 import { getProvidersBySlugs } from "@/lib/providers";
-import { ArrowLeft, Layers } from "lucide-react";
+
+const ICON_MAP: Record<string, React.ElementType<LucideProps>> = {
+  Zap, RefreshCw, CreditCard, ImageIcon, Mic, Gem,
+  Clapperboard, Globe, Search, Bot,
+};
+
+function CollectionIcon({ name, size = 20, className = "" }: { name: string; size?: number; className?: string }) {
+  const Icon = ICON_MAP[name];
+  if (!Icon) return null;
+  return <Icon size={size} className={className} />;
+}
 
 export function generateStaticParams() {
   return collections.filter((c) => c.isPublished).map((c) => ({ slug: c.slug }));
@@ -57,7 +72,9 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
           {/* left */}
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-4xl">{collection.icon}</span>
+              <div className="w-12 h-12 rounded-xl bg-[rgba(0,255,136,0.1)] flex items-center justify-center shrink-0">
+                <CollectionIcon name={collection.icon} size={22} className="text-accent" />
+              </div>
               <span className="text-xs font-mono text-fg-2 px-2.5 py-1 bg-bg-1 border border-line rounded-full">
                 {collection.subtitle}
               </span>
@@ -118,7 +135,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ slu
                   href={`/collections/${c.slug}`}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-bg-1 border border-line rounded-full text-sm text-fg-1 hover:border-accent hover:text-accent transition-colors"
                 >
-                  <span>{c.icon}</span>
+                  <CollectionIcon name={c.icon} size={13} className="shrink-0" />
                   {c.title}
                 </Link>
               ))}

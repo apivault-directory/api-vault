@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
-import { Github, ExternalLink, CheckCircle2, Clock, Search } from "lucide-react";
+import { CheckCircle2, Search, ClipboardList, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Submit an API",
-  description: "Know a free AI API we should track? Submit it via GitHub Issues for review.",
+  description: "Know a free AI API we should track? Submit it for review — we verify every API manually.",
   alternates: { canonical: "/submit" },
 };
-
-const GITHUB_ISSUE_URL =
-  "https://github.com/apivault-directory/api-vault/issues/new?template=submit-api.md&title=%5BSubmit%5D+API+Name+Here&labels=submission";
 
 const steps = [
   {
@@ -19,19 +16,19 @@ const steps = [
     desc: 'Search apivault.directory/providers first — it might already be there.',
   },
   {
-    icon: Github,
-    title: "Open a GitHub Issue",
-    desc: "Click the button below. A pre-filled template will guide you through what we need.",
-  },
-  {
-    icon: Clock,
-    title: "We review within 7 days",
-    desc: "We manually verify the free tier, test the API, and add it if it qualifies.",
+    icon: ClipboardList,
+    title: "Fill the form below",
+    desc: "Takes ~2 minutes. Tell us the name, category, free tier details, and docs URL.",
   },
   {
     icon: CheckCircle2,
+    title: "We verify within 7 days",
+    desc: "We manually test the free tier and API before adding it to the directory.",
+  },
+  {
+    icon: Zap,
     title: "Goes live on next deploy",
-    desc: "Once verified, it's added to providers.ts and deployed automatically.",
+    desc: "Once verified it's added to providers.ts and deployed automatically.",
   },
 ];
 
@@ -64,7 +61,7 @@ export default function SubmitPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* left: steps */}
           <div>
             <p className="text-xs font-mono text-fg-2 uppercase tracking-wider mb-6">How it works</p>
@@ -84,26 +81,9 @@ export default function SubmitPage() {
                 </li>
               ))}
             </ol>
-
-            {/* CTA */}
-            <div className="mt-10">
-              <a
-                href={GITHUB_ISSUE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 h-12 rounded-md bg-accent text-bg-0 text-sm font-semibold hover:bg-accent-dim transition-all hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(0,255,136,0.3)]"
-              >
-                <Github size={16} />
-                Open submission on GitHub
-                <ExternalLink size={13} />
-              </a>
-              <p className="text-xs text-fg-3 font-mono mt-3">
-                GitHub account required · Takes ~2 minutes
-              </p>
-            </div>
           </div>
 
-          {/* right: criteria + info */}
+          {/* right: criteria */}
           <div className="space-y-6">
             <div className="bg-bg-1 border border-line rounded-xl p-6">
               <p className="text-xs font-mono text-fg-2 uppercase tracking-wider mb-4">
@@ -146,9 +126,24 @@ export default function SubmitPage() {
               <p className="text-sm text-fg-1">
                 We review submissions within <span className="text-fg-0 font-medium">7 days</span>.
                 Once verified, the API goes live on the next deploy.
-                You'll get a reply on the GitHub issue thread.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* ── Tally form embed ── */}
+        <div className="border-t border-line pt-12 pb-8">
+          <p className="text-xs font-mono text-fg-2 uppercase tracking-wider mb-6">Submission form</p>
+          <div className="rounded-xl border border-line overflow-hidden bg-bg-1">
+            <iframe
+              src="https://tally.so/embed/0Qk5kB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              loading="lazy"
+              width="100%"
+              height="500"
+              title="Submit an API to APIVault"
+              className="block"
+              style={{ border: "none", background: "transparent" }}
+            />
           </div>
         </div>
       </section>
