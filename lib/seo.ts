@@ -1,6 +1,6 @@
 import type { Provider } from "./types";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://apivault.dev";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.apivault.directory";
 export const SITE_NAME = "APIVault";
 export const SITE_DESCRIPTION =
   "The developer directory of free AI APIs. Verified weekly, ranked transparently, with copy-paste code on every page.";
