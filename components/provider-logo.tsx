@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 type Size = "sm" | "md" | "lg" | "xl";
 
 const sizeMap: Record<Size, { box: string; text: string; img: number; padding: string }> = {
-  sm: { box: "w-8 h-8",   text: "text-xs",  img: 20, padding: "p-1" },
-  md: { box: "w-10 h-10", text: "text-sm",  img: 24, padding: "p-1.5" },
-  lg: { box: "w-14 h-14", text: "text-lg",  img: 36, padding: "p-2" },
-  xl: { box: "w-16 h-16", text: "text-2xl", img: 40, padding: "p-2.5" },
+  sm: { box: "w-9 h-9",   text: "text-xs",  img: 28, padding: "p-1" },
+  md: { box: "w-12 h-12", text: "text-sm",  img: 40, padding: "p-1.5" },
+  lg: { box: "w-16 h-16", text: "text-lg",  img: 52, padding: "p-2" },
+  xl: { box: "w-20 h-20", text: "text-2xl", img: 64, padding: "p-2.5" },
 };
 
 interface ProviderLogoProps {
@@ -28,9 +28,9 @@ export function ProviderLogo({ domain, text, size = "md", className }: ProviderL
 
   const src =
     stage === "clearbit"
-      ? `https://logo.clearbit.com/${domain}`
+      ? `https://logo.clearbit.com/${domain}?size=128`
       : stage === "google"
-      ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
+      ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
       : null;
 
   function handleError() {
@@ -52,7 +52,7 @@ export function ProviderLogo({ domain, text, size = "md", className }: ProviderL
           alt={text}
           width={s.img}
           height={s.img}
-          className={cn("relative z-10 object-contain rounded-sm", s.padding)}
+          className={cn("relative z-10 object-contain rounded-sm w-full h-full", s.padding)}
           onError={handleError}
           unoptimized
         />

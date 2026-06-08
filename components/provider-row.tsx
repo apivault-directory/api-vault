@@ -8,9 +8,9 @@ export function ProviderRow({ provider }: { provider: Provider }) {
   return (
     <Link
       href={`/providers/${provider.slug}`}
-      className="group grid grid-cols-[44px_1fr_auto] gap-4 p-4 bg-bg-1 border border-line rounded-md transition-all duration-200 hover:border-[rgba(0,255,136,0.3)] hover:bg-bg-2 hover:translate-x-0.5 items-center"
+      className="group grid grid-cols-[56px_1fr_auto] gap-4 p-4 bg-bg-1 border border-line rounded-md transition-all duration-200 hover:border-[rgba(0,255,136,0.3)] hover:bg-bg-2 hover:translate-x-0.5 items-center"
     >
-      <ProviderLogo domain={provider.domain} text={provider.logoText} size="md" />
+      <ProviderLogo domain={provider.domain} text={provider.logoText} size="lg" />
       <div className="min-w-0">
         <h3 className="text-[15px] font-semibold mb-0.5 flex items-center gap-2">
           <StatusDot status={provider.status} />

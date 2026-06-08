@@ -15,7 +15,7 @@ export function ProviderCard({ provider }: { provider: Provider }) {
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="flex items-center gap-3 min-w-0">
-          <ProviderLogo domain={provider.domain} text={provider.logoText} size="md" />
+          <ProviderLogo domain={provider.domain} text={provider.logoText} size="lg" />
           <div className="min-w-0">
             <h3 className="text-base font-semibold truncate group-hover:text-accent transition-colors">
               {provider.name}
