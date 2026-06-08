@@ -74,10 +74,18 @@ export function Footer() {
 
       <div className="max-w-[1280px] mx-auto mt-10 pt-6 border-t border-line flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-[12px] text-fg-2 font-mono">
         <span>© {currentYear} APIVault — made for developers</span>
-        <span className="flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_6px_#00FF88] inline-block" />
-          curated &amp; ranked · no fake data
-        </span>
+        <div className="flex items-center gap-4">
+          <a href="https://x.com/apivault" target="_blank" rel="noopener noreferrer" className="hover:text-fg-0 transition-colors">
+            Twitter / X
+          </a>
+          <a href="https://github.com/apivault-directory" target="_blank" rel="noopener noreferrer" className="hover:text-fg-0 transition-colors">
+            GitHub
+          </a>
+          <span className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_6px_#00FF88] inline-block" />
+            curated &amp; ranked · no fake data
+          </span>
+        </div>
       </div>
     </footer>
   );

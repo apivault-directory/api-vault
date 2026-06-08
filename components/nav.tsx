@@ -12,7 +12,7 @@ const links = [
   { label: "Status", href: "/status" },
 ];
 
-const GITHUB_URL = "https://github.com/apivault/apivault";
+const GITHUB_URL = "https://github.com/apivault-directory";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
