@@ -1,0 +1,11 @@
+{
+  "slug": "replicate",
+  "entries": [
+    {
+      "timestamp": "2026-06-08T10:18:35.584Z",
+      "httpStatus": 200,
+      "responseTimeMs": 465,
+      "reachable": true
+    }
+  ]
+}

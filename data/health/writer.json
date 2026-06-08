@@ -1,0 +1,11 @@
+{
+  "slug": "writer",
+  "entries": [
+    {
+      "timestamp": "2026-06-08T10:19:54.123Z",
+      "httpStatus": 200,
+      "responseTimeMs": 365,
+      "reachable": true
+    }
+  ]
+}

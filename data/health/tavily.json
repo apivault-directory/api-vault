@@ -1,0 +1,11 @@
+{
+  "slug": "tavily",
+  "entries": [
+    {
+      "timestamp": "2026-06-08T10:19:08.676Z",
+      "httpStatus": 200,
+      "responseTimeMs": 407,
+      "reachable": true
+    }
+  ]
+}
