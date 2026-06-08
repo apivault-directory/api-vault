@@ -66,7 +66,7 @@ async function probe(url: string): Promise<{ httpStatus: number | null; response
       method: "HEAD",
       redirect: "follow",
       signal: controller.signal,
-      headers: { "User-Agent": "APIVault-HealthCheck/1.0 (+https://apivault.dev)" },
+      headers: { "User-Agent": "APIVault-HealthCheck/1.0 (+https://www.apivault.directory)" },
     });
     clearTimeout(timer);
     return {
@@ -83,7 +83,7 @@ async function probe(url: string): Promise<{ httpStatus: number | null; response
         method: "GET",
         redirect: "follow",
         signal: controller2.signal,
-        headers: { "User-Agent": "APIVault-HealthCheck/1.0 (+https://apivault.dev)" },
+        headers: { "User-Agent": "APIVault-HealthCheck/1.0 (+https://www.apivault.directory)" },
       });
       clearTimeout(timer2);
       return {

@@ -187,7 +187,7 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
           <ScoreBar label="Popularity (15%)" value={provider.popularityScore} weight="GitHub stars (log-normalised), or manual baseline" />
         </div>
         <p className="text-xs text-fg-3 font-mono mt-3">
-          Methodology: <a href="/methodology" className="text-fg-2 underline underline-offset-2 hover:text-accent">apivault.dev/methodology</a>
+          Methodology: <a href="/methodology" className="text-fg-2 underline underline-offset-2 hover:text-accent">apivault.directory/methodology</a>
         </p>
       </section>
 

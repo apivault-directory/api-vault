@@ -42,7 +42,7 @@ function loadExisting(): Record<string, PopularityEntry> {
 async function fetchStars(repo: string): Promise<number | null> {
   const headers: Record<string, string> = {
     Accept: "application/vnd.github+json",
-    "User-Agent": "APIVault-PopularityFetch/1.0 (+https://apivault.dev)",
+    "User-Agent": "APIVault-PopularityFetch/1.0 (+https://www.apivault.directory)",
   };
 
   const token = process.env.GITHUB_TOKEN;
