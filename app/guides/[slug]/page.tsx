@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { ProviderLogo } from "@/components/provider-logo";
 import { guides } from "@/lib/guides";
 import { getProvidersBySlugs } from "@/lib/providers";
 import { formatDate } from "@/lib/utils";
@@ -47,7 +48,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
               {related.map((p) => (
                 <a key={p.slug} href={`/providers/${p.slug}`} className="flex items-center justify-between bg-bg-1 border border-line rounded-md p-3 hover:border-line-2 hover:bg-bg-2 transition-colors">
                   <div className="flex items-center gap-3">
-                    <span className="font-mono font-semibold w-8 text-center">{p.logoText}</span>
+                    <ProviderLogo domain={p.domain} text={p.logoText} size="sm" />
                     <span className="text-sm font-medium">{p.name}</span>
                   </div>
                   <span className="font-mono text-sm text-accent">{p.apivaultScore}/100</span>
