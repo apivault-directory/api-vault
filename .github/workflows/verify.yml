@@ -1,60 +1,47 @@
 name: Verify Providers
 
 on:
-  # Run every day at 06:00 UTC
   schedule:
     - cron: "0 6 * * *"
-  # Also allow manual trigger from the GitHub Actions UI
   workflow_dispatch:
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # needed to commit data/ back to the repo
+      contents: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
-      # -----------------------------------------------------------------------
-      # Fetch GitHub star counts
-      # Set GITHUB_TOKEN as a repository secret (Settings → Secrets → Actions).
-      # It's optional — the script still runs without it, but at 60 req/hr limit.
-      # Use a fine-grained PAT with NO extra scopes (public repo read is enough).
-      # -----------------------------------------------------------------------
       - name: Fetch popularity (GitHub stars)
         run: npm run fetch-popularity
         env:
           GITHUB_TOKEN: ${{ secrets.POPULARITY_GITHUB_TOKEN }}
-        continue-on-error: true   # don't fail the whole workflow if GitHub rate-limits us
+        continue-on-error: true
 
-      # -----------------------------------------------------------------------
-      # Health-check all providers
-      # -----------------------------------------------------------------------
       - name: Run health checks
         run: npm run health-check
         env:
           HEALTH_TIMEOUT_MS: "10000"
-          HEALTH_DELAY_MS: "600"   # be polite — 600 ms between each provider
+          HEALTH_DELAY_MS: "600"
 
-      # -----------------------------------------------------------------------
-      # Commit updated data/ files back to main
-      # -----------------------------------------------------------------------
       - name: Commit results
         run: |
           git config user.name  "apivault-bot"
           git config user.email "apivaultdirectory@gmail.com"
           git add data/
-          # Only commit if there are actual changes
           git diff --cached --quiet || git commit -m "chore: update health & popularity data [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
-          git push
+          git push origin HEAD:main
