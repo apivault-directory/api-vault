@@ -120,15 +120,15 @@ export default function CollectionsPage() {
               <p className="text-fg-1 text-sm md:text-base max-w-[560px] leading-relaxed mb-4 ml-[52px]">
                 {featured.description}
               </p>
-              {/* avatars + count + button (mobile: inline) */}
-              <div className="flex items-center justify-between ml-[52px]">
-                <div className="flex items-center gap-3">
-                  <ProviderAvatars slugs={featured.providerSlugs} />
-                  <span className="text-sm font-mono text-fg-2">{featuredItems.length} APIs</span>
-                </div>
-                {/* button shown inline on mobile */}
-                <div className="md:hidden inline-flex items-center gap-1.5 px-4 h-9 rounded-md bg-accent text-bg-0 text-xs font-medium">
-                  View <ArrowRight size={12} />
+              {/* avatars + count */}
+              <div className="flex items-center gap-3 ml-[52px] mb-4">
+                <ProviderAvatars slugs={featured.providerSlugs} />
+                <span className="text-sm font-mono text-fg-2">{featuredItems.length} APIs</span>
+              </div>
+              {/* CTA button — mobile only, below avatars */}
+              <div className="ml-[52px] md:hidden">
+                <div className="inline-flex items-center gap-2 px-5 h-10 rounded-md bg-accent text-bg-0 text-sm font-medium">
+                  View collection <ArrowRight size={14} />
                 </div>
               </div>
             </div>
