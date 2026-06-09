@@ -1281,6 +1281,27 @@ export const providers: Provider[] = [
     changelog: [],
     foundedYear: 2005, headquarters: "Beijing, China",
   },
+  {
+    slug: "viktor", name: "Viktor", logoText: "V", domain: "viktor.com",
+    tagline: "$100 free credits. AI agent for Slack & Teams — no credit card required.",
+    description: "Viktor is an AI agent that lives inside Slack or Microsoft Teams. It connects to 3,200+ tools, writes code, and delivers real outputs like PDFs, dashboards, and web apps. New users get $100 in free credits with no credit card required. Sign up at app.viktor.com.",
+    category: "LLM", website: "https://viktor.com", docsUrl: "https://viktor.com", apiUrl: "https://app.viktor.com/signup",
+    apivaultScore: 80, reliabilityScore: 80, documentationScore: 72, freeTierScore: 88, popularityScore: 72,
+    docManualScore: 3,
+    status: "online", lastVerified: "2026-06-10", freeTierSummary: "$100 free credits · no card · Slack & Teams",
+    freeTierDetails: { monthlyRequests: "$100 free credits", models: "Multiple AI models via Slack/Teams" },
+    requiresCreditCard: false, requiresPhone: false,
+    tags: ["Slack", "Teams", "AI agent", "No-code", "Automation"],
+    snippets: [
+      { language: "curl", label: "Setup", code: `# Viktor is a Slack/Teams AI agent — no API calls needed\n\n# 1. Sign up free at app.viktor.com (no credit card)\n# 2. You get $100 in free credits\n# 3. Add Viktor to your Slack or Teams workspace\n# 4. Start delegating tasks directly in chat\n\n# Viktor connects to 3,200+ tools and can:\n# - Write and run code\n# - Generate PDFs, dashboards, and web apps\n# - Automate workflows across your tools` },
+    ],
+    pros: ["$100 free credits, no credit card required", "Connects to 3,200+ tools", "Works inside Slack & Microsoft Teams", "Full feature access on free tier"],
+    cons: ["Not a traditional REST API — no API key/endpoint", "Requires Slack or Teams workspace", "Free credits are one-time"],
+    useCases: ["Team automation in Slack", "No-code AI workflows", "Delegating research and reporting tasks"],
+    changelog: [{ date: "2026-06-10", type: "added", title: "Added to APIVault — $100 free credits, no CC" }],
+    social: { twitter: "https://x.com/viktor__com" },
+    foundedYear: 2023, headquarters: "San Francisco, CA",
+  },
 ];
 
 export const getProviderBySlug = (slug: string) => providers.find((p) => p.slug === slug);
