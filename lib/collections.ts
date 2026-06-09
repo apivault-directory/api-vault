@@ -33,7 +33,7 @@ export const collections: Collection[] = [
       "runwayml", "lumaai", "tavily", "perplexity",
       "fireworks", "together", "modal", "lemonfox", "cohere",
       "hyperbolic", "glhf", "lambda", "lepton", "novita",
-      "nvidia-nim", "ai21", "cloudflare-workers-ai", "upstage", "writer", "grok",
+      "nvidia-nim", "ai21", "cloudflare-workers-ai", "upstage", "writer", "grok", "viktor",
     ],
     isPublished: true,
   },
