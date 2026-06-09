@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import { getAllProvidersWithMetrics } from "@/lib/metrics";
 import type { Category } from "@/lib/types";
 
-export const runtime = "edge";
-
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, OPTIONS",

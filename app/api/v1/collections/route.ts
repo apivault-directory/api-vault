@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { collections } from "@/lib/collections";
 
-export const runtime = "edge";
-
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, OPTIONS",
