@@ -26,7 +26,7 @@ export default function Home() {
       <Nav />
 
       {/* ── HERO ── */}
-      <section className="max-w-[1280px] mx-auto px-6 pt-20 pb-16 text-center">
+      <section className="max-w-[1280px] mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 sm:pb-16 text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-line-2 rounded-full text-xs font-mono text-fg-1 bg-bg-1 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#00FF88] animate-pulse-slow" />
           <span>{providers.length} APIs · curated &amp; ranked transparently</span>
@@ -55,7 +55,7 @@ export default function Home() {
           <ButtonLink href="/methodology" variant="ghost">How we rank</ButtonLink>
         </div>
 
-        <div className="flex gap-8 sm:gap-10 justify-center pt-8 border-t border-line max-w-[720px] mx-auto flex-wrap">
+        <div className="grid grid-cols-2 sm:flex sm:gap-10 justify-center pt-8 border-t border-line max-w-[720px] mx-auto gap-4 sm:gap-8">
           <Stat num={String(providers.length)} label="APIs tracked" />
           <Stat num={String(noCardCount)} label="No credit card" />
           <Stat num={String(avg)} suffix="/100" label="Avg. trust score" />

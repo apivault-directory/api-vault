@@ -47,18 +47,18 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
       ])) }} />
 
       <section className="max-w-[1280px] mx-auto px-6 py-12">
-        <div className="flex items-start justify-between gap-8 mb-8 flex-wrap">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-8">
           <div className="flex items-start gap-4 min-w-0 flex-1">
             <ProviderLogo domain={provider.domain} text={provider.logoText} size="xl" />
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1">
               <div className="flex items-center gap-3 mb-2 flex-wrap">
-                <h1 className="font-display text-3xl font-semibold tracking-tight">{provider.name}</h1>
+                <h1 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight">{provider.name}</h1>
                 <div className="flex items-center gap-1.5 text-sm">
                   <StatusDot status={provider.status} />
                   <span className="text-fg-1 capitalize">{provider.status}</span>
                 </div>
               </div>
-              <p className="text-fg-1 text-base max-w-2xl">{provider.tagline}</p>
+              <p className="text-fg-1 text-sm sm:text-base max-w-2xl">{provider.tagline}</p>
               <div className="flex items-center gap-3 mt-2 flex-wrap">
                 <span className="flex items-center gap-1.5 text-xs text-fg-2 font-mono">
                   <CategoryIcon category={provider.category} size={12} />
@@ -73,7 +73,9 @@ export default async function ProviderPage({ params }: { params: Promise<{ slug:
               </div>
             </div>
           </div>
-          <TrustScore score={provider.apivaultScore} size="xl" />
+          <div className="shrink-0">
+            <TrustScore score={provider.apivaultScore} size="xl" />
+          </div>
         </div>
         <div className="flex flex-wrap gap-3">
           <ButtonLink href={provider.website} external rightIcon={<ExternalLink size={14} />}>Get API Key</ButtonLink>
