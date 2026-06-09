@@ -10,6 +10,7 @@ const links = [
   { label: "Guides", href: "/guides" },
   { label: "Alternatives", href: "/alternatives" },
   { label: "Status", href: "/status" },
+  { label: "API", href: "/api-docs" },
 ];
 
 const GITHUB_URL = "https://github.com/apivault-directory";
