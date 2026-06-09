@@ -97,32 +97,43 @@ export default function CollectionsPage() {
       <section className="max-w-[1280px] mx-auto px-6 pb-8">
         <Link
           href={`/collections/${featured.slug}`}
-          className={`group block rounded-xl border ${fac.border} bg-bg-1 p-8 transition-all duration-300 hover:bg-bg-2 hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)] relative overflow-hidden`}
+          className={`group block rounded-xl border ${fac.border} bg-bg-1 p-5 md:p-8 transition-all duration-300 hover:bg-bg-2 hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)] relative overflow-hidden`}
         >
           <span className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,255,136,0.05),transparent_60%)] pointer-events-none" />
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-5">
-                <span className={`text-[11px] font-mono px-2.5 py-1 rounded-full ${fac.tag}`}>Featured collection</span>
-                <span className="text-fg-2 text-sm font-mono">{featured.subtitle}</span>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 relative">
+            <div className="flex-1 min-w-0">
+              {/* tags row */}
+              <div className="flex items-center gap-2 mb-3">
+                <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${fac.tag}`}>Featured</span>
+                <span className="text-fg-2 text-xs font-mono">{featured.subtitle}</span>
               </div>
-              <div className="flex items-center gap-4 mb-3">
-                <div className={`w-12 h-12 rounded-xl ${fac.iconBg} flex items-center justify-center shrink-0`}>
-                  <CollectionIcon name={featured.icon} size={24} className={fac.iconColor} />
+              {/* icon + title */}
+              <div className="flex items-center gap-3 mb-2">
+                <div className={`w-10 h-10 rounded-xl ${fac.iconBg} flex items-center justify-center shrink-0`}>
+                  <CollectionIcon name={featured.icon} size={20} className={fac.iconColor} />
                 </div>
-                <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight group-hover:text-accent transition-colors">
+                <h2 className="font-display text-xl md:text-3xl font-semibold tracking-tight group-hover:text-accent transition-colors">
                   {featured.title}
                 </h2>
               </div>
-              <p className="text-fg-1 text-base max-w-[560px] leading-relaxed mb-6 ml-16">
+              {/* description */}
+              <p className="text-fg-1 text-sm md:text-base max-w-[560px] leading-relaxed mb-4 ml-[52px]">
                 {featured.description}
               </p>
-              <div className="flex items-center gap-4 ml-16">
-                <ProviderAvatars slugs={featured.providerSlugs} />
-                <span className="text-sm font-mono text-fg-2">{featuredItems.length} APIs</span>
+              {/* avatars + count + button (mobile: inline) */}
+              <div className="flex items-center justify-between ml-[52px]">
+                <div className="flex items-center gap-3">
+                  <ProviderAvatars slugs={featured.providerSlugs} />
+                  <span className="text-sm font-mono text-fg-2">{featuredItems.length} APIs</span>
+                </div>
+                {/* button shown inline on mobile */}
+                <div className="md:hidden inline-flex items-center gap-1.5 px-4 h-9 rounded-md bg-accent text-bg-0 text-xs font-medium">
+                  View <ArrowRight size={12} />
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-end gap-4 shrink-0">
+            {/* right side — hidden on mobile */}
+            <div className="hidden md:flex flex-col items-end gap-4 shrink-0">
               <div className="font-display text-7xl font-bold text-accent opacity-10 leading-none select-none">
                 {featuredItems.length}
               </div>
