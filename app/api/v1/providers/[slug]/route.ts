@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getProviderWithMetrics } from "@/lib/metrics";
+import { getProviderBySlug } from "@/lib/providers";
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -13,7 +13,7 @@ export function OPTIONS() {
 
 export async function GET(_req: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const provider = getProviderWithMetrics(slug);
+  const provider = getProviderBySlug(slug);
 
   if (!provider) {
     return NextResponse.json(
@@ -33,13 +33,6 @@ export async function GET(_req: Request, { params }: { params: Promise<{ slug: s
       website: provider.website,
       docsUrl: provider.docsUrl,
       status: provider.status,
-      apivaultScore: provider.apivaultScore,
-      scores: {
-        reliability: provider.reliabilityScore,
-        freeTier: provider.freeTierScore,
-        documentation: provider.documentationScore,
-        popularity: provider.popularityScore,
-      },
       freeTier: {
         summary: provider.freeTierSummary,
         details: provider.freeTierDetails,

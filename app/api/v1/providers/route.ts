@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getAllProvidersWithMetrics } from "@/lib/metrics";
+import { providers } from "@/lib/providers";
 import type { Category } from "@/lib/types";
 
 const CORS = {
@@ -18,27 +18,26 @@ export function GET(req: Request) {
   const noCard = searchParams.get("noCard");
   const noPhone = searchParams.get("noPhone");
   const q = searchParams.get("q")?.toLowerCase();
-  const sort = searchParams.get("sort") ?? "score"; // score | name
+  const sort = searchParams.get("sort") ?? "name";
   const limitParam = searchParams.get("limit");
   const limit = limitParam ? Math.min(Math.max(parseInt(limitParam), 1), 200) : 200;
 
-  let providers = getAllProvidersWithMetrics();
+  let result = [...providers];
 
-  if (category) providers = providers.filter((p) => p.category === category);
-  if (noCard === "true") providers = providers.filter((p) => !p.requiresCreditCard);
-  if (noPhone === "true") providers = providers.filter((p) => !p.requiresPhone);
-  if (q) providers = providers.filter((p) =>
+  if (category) result = result.filter((p) => p.category === category);
+  if (noCard === "true") result = result.filter((p) => !p.requiresCreditCard);
+  if (noPhone === "true") result = result.filter((p) => !p.requiresPhone);
+  if (q) result = result.filter((p) =>
     p.name.toLowerCase().includes(q) ||
     p.tagline.toLowerCase().includes(q) ||
     p.category.toLowerCase().includes(q)
   );
 
-  if (sort === "name") providers.sort((a, b) => a.name.localeCompare(b.name));
-  else providers.sort((a, b) => b.apivaultScore - a.apivaultScore);
+  if (sort === "name") result.sort((a, b) => a.name.localeCompare(b.name));
 
-  providers = providers.slice(0, limit);
+  result = result.slice(0, limit);
 
-  const data = providers.map((p) => ({
+  const data = result.map((p) => ({
     slug: p.slug,
     name: p.name,
     tagline: p.tagline,
@@ -46,7 +45,6 @@ export function GET(req: Request) {
     website: p.website,
     docsUrl: p.docsUrl,
     status: p.status,
-    apivaultScore: p.apivaultScore,
     freeTierSummary: p.freeTierSummary,
     requiresCreditCard: p.requiresCreditCard,
     requiresPhone: p.requiresPhone,
@@ -54,11 +52,7 @@ export function GET(req: Request) {
   }));
 
   return NextResponse.json(
-    {
-      object: "list",
-      count: data.length,
-      data,
-    },
+    { object: "list", count: data.length, data },
     { headers: { ...CORS, "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } }
   );
 }

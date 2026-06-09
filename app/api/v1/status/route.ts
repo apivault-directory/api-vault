@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getAllProvidersWithMetrics } from "@/lib/metrics";
+import { providers } from "@/lib/providers";
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -12,8 +12,6 @@ export function OPTIONS() {
 }
 
 export function GET() {
-  const providers = getAllProvidersWithMetrics();
-
   const summary = {
     online: providers.filter((p) => p.status === "online").length,
     degraded: providers.filter((p) => p.status === "degraded").length,
@@ -30,11 +28,7 @@ export function GET() {
   }));
 
   return NextResponse.json(
-    {
-      object: "status",
-      summary,
-      data,
-    },
+    { object: "status", summary, data },
     { headers: { ...CORS, "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" } }
   );
 }
