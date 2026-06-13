@@ -1302,6 +1302,26 @@ export const providers: Provider[] = [
     social: { twitter: "https://x.com/viktor__com" },
     foundedYear: 2023, headquarters: "San Francisco, CA",
   },
+  {
+    slug: "junior", name: "Junior.so", logoText: "J", domain: "junior.so",
+    tagline: "$100 free credit. YC-backed AI coding assistant for Slack & Teams.",
+    description: "Junior is a YC-backed AI coding assistant that lives in Slack or Microsoft Teams. New workspaces get $100 in free credits (auto-granted on connect, no credit card needed). Powered by Claude Sonnet on the free tier. Handles real coding tasks — PRs, bug fixes, code reviews — directly in chat.",
+    category: "Code", website: "https://junior.so", docsUrl: "https://junior.so", apiUrl: "https://junior.so",
+    apivaultScore: 78, reliabilityScore: 78, documentationScore: 72, freeTierScore: 82, popularityScore: 72,
+    docManualScore: 3,
+    status: "online", lastVerified: "2026-06-13", freeTierSummary: "$100 free credit · 7 days · Claude Sonnet · no CC",
+    freeTierDetails: { monthlyRequests: "$100 free credit (7 days)", models: "Claude Sonnet (free tier)" },
+    requiresCreditCard: false, requiresPhone: false,
+    tags: ["Slack", "Teams", "AI coding", "GitHub", "YC-backed"],
+    snippets: [
+      { language: "curl", label: "Setup", code: `# Junior is a Slack/Teams AI coding assistant — no API calls needed\n\n# 1. Go to junior.so and connect your Slack or Teams workspace\n# 2. $100 free credit is auto-granted (no credit card required)\n# 3. Junior connects to your GitHub repos\n# 4. Assign coding tasks directly in Slack/Teams chat\n\n# Free tier limits:\n# - Claude Sonnet model only\n# - 1 Junior instance\n# - 3 concurrent sessions\n# - Credits valid for 7 days\n# - One trial per workspace` },
+    ],
+    pros: ["$100 free credit, no credit card required", "YC-backed — real company, not a side project", "Handles real coding tasks (PRs, bug fixes, code reviews)", "GitHub integration included"],
+    cons: ["Not a REST API — works via Slack/Teams only", "Free credit expires in 7 days", "Claude Sonnet only on free tier (not Opus)", "One trial per workspace"],
+    useCases: ["AI-assisted code reviews in Slack", "Automated bug fixes via chat", "Team coding workflows without leaving Slack"],
+    changelog: [{ date: "2026-06-13", type: "added", title: "Added to APIVault — $100 free credit, YC-backed, no CC" }],
+    foundedYear: 2023, headquarters: "San Francisco, CA",
+  },
 ];
 
 export const getProviderBySlug = (slug: string) => providers.find((p) => p.slug === slug);
