@@ -1,0 +1,11 @@
+{
+  "slug": "junior",
+  "entries": [
+    {
+      "timestamp": "2026-06-13T12:12:06.285Z",
+      "httpStatus": 200,
+      "responseTimeMs": 400,
+      "reachable": true
+    }
+  ]
+}
