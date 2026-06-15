@@ -42,6 +42,12 @@
       "httpStatus": 200,
       "responseTimeMs": 264,
       "reachable": true
+    },
+    {
+      "timestamp": "2026-06-15T19:59:55.771Z",
+      "httpStatus": 200,
+      "responseTimeMs": 583,
+      "reachable": true
     }
   ]
 }
