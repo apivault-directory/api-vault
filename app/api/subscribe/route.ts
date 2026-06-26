@@ -14,13 +14,17 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
-    // Add to audience
+    // Add to audience (only if audience ID is set and plan supports it)
     if (AUDIENCE_ID) {
-      await resend.contacts.create({
-        email,
-        audienceId: AUDIENCE_ID,
-        unsubscribed: false,
-      });
+      try {
+        await resend.contacts.create({
+          email,
+          audienceId: AUDIENCE_ID,
+          unsubscribed: false,
+        });
+      } catch {
+        // Audience API may not be available on free plan — continue anyway
+      }
     }
 
     // Send welcome email
