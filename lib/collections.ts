@@ -33,7 +33,7 @@ export const collections: Collection[] = [
       "runwayml", "lumaai", "tavily", "perplexity",
       "fireworks", "together", "modal", "lemonfox", "cohere",
       "hyperbolic", "glhf", "lambda", "lepton", "novita",
-      "nvidia-nim", "ai21", "cloudflare-workers-ai", "upstage", "writer", "grok", "viktor",
+      "nvidia-nim", "ai21", "cloudflare-workers-ai", "upstage", "writer", "grok", "viktor", "e2b", "daytona",
     ],
     isPublished: true,
   },
@@ -102,7 +102,7 @@ export const collections: Collection[] = [
     subtitle: "Build agents, no infra",
     description: "Platforms for building and deploying AI agents without managing infrastructure. Many include free tiers with powerful underlying models.",
     icon: "Bot",
-    providerSlugs: ["coze", "yuanqi", "coworker", "modal", "cloudflare-workers-ai", "lepton"],
+    providerSlugs: ["coze", "yuanqi", "coworker", "modal", "cloudflare-workers-ai", "lepton", "e2b", "daytona", "viktor", "junior"],
     isPublished: true,
   },
 ];
