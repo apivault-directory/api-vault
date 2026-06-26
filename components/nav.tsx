@@ -8,7 +8,7 @@ const links = [
   { label: "Providers", href: "/providers" },
   { label: "Collections", href: "/collections" },
   { label: "Guides", href: "/guides" },
-  { label: "Alternatives", href: "/alternatives" },
+  { label: "Compare", href: "/compare" },
   { label: "Status", href: "/status" },
   { label: "API", href: "/api-docs" },
   { label: "$API", href: "/token" },
