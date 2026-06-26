@@ -81,7 +81,7 @@ export function Footer() {
           className="group flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 bg-bg-1 border border-line rounded-lg px-4 py-3 hover:border-[rgba(0,255,136,0.3)] transition-colors"
         >
           <span className="font-mono text-[10px] text-fg-2 uppercase tracking-wider shrink-0">
-            $EASY · Contract
+            $API · Contract
           </span>
           <code className="font-mono text-[11px] sm:text-xs text-fg-1 group-hover:text-accent transition-colors break-all">
             TNvdFyzgXmw1mb2rYhjWuXTxFoZucssDUkn5bEkEASY

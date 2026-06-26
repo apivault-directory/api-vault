@@ -27,9 +27,23 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="max-w-[1280px] mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 sm:pb-16 text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-line-2 rounded-full text-xs font-mono text-fg-1 bg-bg-1 mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#00FF88] animate-pulse-slow" />
-          <span>{providers.length} APIs · curated &amp; ranked transparently</span>
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-line-2 rounded-full text-xs font-mono text-fg-1 bg-bg-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_#00FF88] animate-pulse-slow" />
+            <span>{providers.length} APIs · curated &amp; ranked transparently</span>
+          </div>
+          <a
+            href="https://kickstart.easya.io/token/TNvdFyzgXmw1mb2rYhjWuXTxFoZucssDUkn5bEkEASY"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-3 py-1.5 border border-[rgba(0,255,136,0.25)] rounded-full text-xs font-mono bg-[rgba(0,255,136,0.06)] hover:border-accent transition-colors"
+          >
+            <span className="font-semibold text-accent">$API</span>
+            <span className="text-fg-2 group-hover:text-fg-1 transition-colors hidden sm:inline">
+              TNvdFyzg…bEkEASY
+            </span>
+            <span className="text-fg-3 group-hover:text-accent transition-colors">↗</span>
+          </a>
         </div>
 
         <h1 className="font-display text-[clamp(40px,6vw,72px)] font-semibold leading-[1.05] tracking-[-0.04em] mb-5">
