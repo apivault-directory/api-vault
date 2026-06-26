@@ -74,10 +74,8 @@ export function Footer() {
 
       {/* Token / CA */}
       <div className="max-w-[1280px] mx-auto mt-10 pt-6 border-t border-line">
-        <a
-          href="https://kickstart.easya.io/token/TNvdFyzgXmw1mb2rYhjWuXTxFoZucssDUkn5bEkEASY"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/token"
           className="group flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 bg-bg-1 border border-line rounded-lg px-4 py-3 hover:border-[rgba(0,255,136,0.3)] transition-colors"
         >
           <span className="font-mono text-[10px] text-fg-2 uppercase tracking-wider shrink-0">
@@ -86,7 +84,7 @@ export function Footer() {
           <code className="font-mono text-[11px] sm:text-xs text-fg-1 group-hover:text-accent transition-colors break-all">
             TNvdFyzgXmw1mb2rYhjWuXTxFoZucssDUkn5bEkEASY
           </code>
-        </a>
+        </Link>
       </div>
 
       <div className="max-w-[1280px] mx-auto mt-6 pt-6 border-t border-line flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-[12px] text-fg-2 font-mono">

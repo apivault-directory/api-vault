@@ -6,6 +6,21 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    date: "2026-06-15",
+    title: "v0.9.0 — $API token + on-site contract verification",
+    description: "Launched the $API token via EasyA Kickstart. The official contract address is now displayed in the homepage hero and footer so anyone can verify the real token straight from the source and avoid impersonators.",
+  },
+  {
+    date: "2026-06-13",
+    title: "v0.8.0 — New providers: Viktor & Junior.so",
+    description: "Added two no-credit-card providers with generous free credits. Viktor ($100 free, AI agent for Slack & Teams) and Junior.so ($100 free credit, YC-backed AI coding assistant powered by Claude Sonnet). Both verified — accurate free-tier details, no inflated claims.",
+  },
+  {
+    date: "2026-06-11",
+    title: "v0.7.0 — Public REST API + full mobile overhaul",
+    description: "Shipped a free public REST API (/api/v1) — query providers, collections, and live status programmatically with no auth and CORS enabled. Added an /api-docs page with examples. Rebuilt every page for mobile: status, collections, provider rows, and provider detail no longer overflow on small screens.",
+  },
+  {
     date: "2026-06-08",
     title: "v0.6.0 — 65 providers, Chinese API coverage, working filters",
     description: "Added 45 new providers including hidden Chinese LLMs (SiliconFlow, Moonshot, Zhipu, Baichuan, Hunyuan, iFlytek Spark, ModelScope, SenseNova, 零一万物, 360智脑, TianGong), agent platforms (Coze, Yuanqi), and international providers (Cerebras, Hyperbolic, Chutes, Runway, Luma, Tavily). Provider search and filtering now fully functional. Mobile navigation added.",
