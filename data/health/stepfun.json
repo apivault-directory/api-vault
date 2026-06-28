@@ -120,6 +120,12 @@
       "httpStatus": null,
       "responseTimeMs": 506,
       "reachable": false
+    },
+    {
+      "timestamp": "2026-06-28T12:02:01.355Z",
+      "httpStatus": null,
+      "responseTimeMs": 504,
+      "reachable": false
     }
   ]
 }
