@@ -11,7 +11,6 @@ const links = [
   { label: "Compare", href: "/compare" },
   { label: "Status", href: "/status" },
   { label: "API", href: "/api-docs" },
-  { label: "$API", href: "/token" },
 ];
 
 const GITHUB_URL = "https://github.com/apivault-directory";

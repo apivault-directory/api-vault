@@ -6,11 +6,6 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
-    date: "2026-06-15",
-    title: "v0.9.0 — $API token + on-site contract verification",
-    description: "Launched the $API token via EasyA Kickstart. The official contract address is now displayed in the homepage hero and footer so anyone can verify the real token straight from the source and avoid impersonators.",
-  },
-  {
     date: "2026-06-13",
     title: "v0.8.0 — New providers: Viktor & Junior.so",
     description: "Added two no-credit-card providers with generous free credits. Viktor ($100 free, AI agent for Slack & Teams) and Junior.so ($100 free credit, YC-backed AI coding assistant powered by Claude Sonnet). Both verified — accurate free-tier details, no inflated claims.",
