@@ -486,6 +486,12 @@
       "httpStatus": null,
       "responseTimeMs": 150,
       "reachable": false
+    },
+    {
+      "timestamp": "2026-08-29T12:01:35.071Z",
+      "httpStatus": null,
+      "responseTimeMs": 113,
+      "reachable": false
     }
   ]
 }
