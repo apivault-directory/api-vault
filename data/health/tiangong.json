@@ -2,12 +2,6 @@
   "slug": "tiangong",
   "entries": [
     {
-      "timestamp": "2026-06-08T10:20:53.140Z",
-      "httpStatus": null,
-      "responseTimeMs": 757,
-      "reachable": false
-    },
-    {
       "timestamp": "2026-06-08T17:38:46.631Z",
       "httpStatus": null,
       "responseTimeMs": 692,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-06T09:58:54.218Z",
       "httpStatus": null,
       "responseTimeMs": 313,
+      "reachable": false
+    },
+    {
+      "timestamp": "2026-09-07T11:07:30.674Z",
+      "httpStatus": null,
+      "responseTimeMs": 275,
       "reachable": false
     }
   ]
