@@ -2,12 +2,6 @@
   "slug": "huggingface",
   "entries": [
     {
-      "timestamp": "2026-06-08T17:36:56.750Z",
-      "httpStatus": 200,
-      "responseTimeMs": 112,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-10T17:44:47.867Z",
       "httpStatus": 200,
       "responseTimeMs": 51,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-07T11:05:31.819Z",
       "httpStatus": 200,
       "responseTimeMs": 28,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-08T10:19:13.854Z",
+      "httpStatus": 200,
+      "responseTimeMs": 87,
       "reachable": true
     }
   ]
