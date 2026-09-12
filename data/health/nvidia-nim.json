@@ -2,12 +2,6 @@
   "slug": "nvidia-nim",
   "entries": [
     {
-      "timestamp": "2026-06-13T12:10:08.276Z",
-      "httpStatus": 200,
-      "responseTimeMs": 59,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-14T12:30:10.672Z",
       "httpStatus": 200,
       "responseTimeMs": 27,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-11T10:16:48.339Z",
       "httpStatus": 200,
       "responseTimeMs": 104,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-12T09:50:36.014Z",
+      "httpStatus": 200,
+      "responseTimeMs": 964,
       "reachable": true
     }
   ]

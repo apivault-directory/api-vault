@@ -2,12 +2,6 @@
   "slug": "sambanova",
   "entries": [
     {
-      "timestamp": "2026-06-13T12:10:06.091Z",
-      "httpStatus": 200,
-      "responseTimeMs": 800,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-14T12:30:08.638Z",
       "httpStatus": 200,
       "responseTimeMs": 224,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-11T10:16:45.956Z",
       "httpStatus": 200,
       "responseTimeMs": 329,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-12T09:50:32.441Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1586,
       "reachable": true
     }
   ]

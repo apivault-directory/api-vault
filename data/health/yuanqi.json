@@ -2,12 +2,6 @@
   "slug": "yuanqi",
   "entries": [
     {
-      "timestamp": "2026-06-13T12:12:02.574Z",
-      "httpStatus": 200,
-      "responseTimeMs": 1309,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-14T12:31:49.606Z",
       "httpStatus": 200,
       "responseTimeMs": 910,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-11T10:19:17.354Z",
       "httpStatus": 200,
       "responseTimeMs": 620,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-12T09:53:15.758Z",
+      "httpStatus": 200,
+      "responseTimeMs": 2460,
       "reachable": true
     }
   ]

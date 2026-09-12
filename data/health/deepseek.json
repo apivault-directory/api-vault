@@ -2,12 +2,6 @@
   "slug": "deepseek",
   "entries": [
     {
-      "timestamp": "2026-06-13T12:09:47.396Z",
-      "httpStatus": 200,
-      "responseTimeMs": 1942,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-14T12:29:50.927Z",
       "httpStatus": 200,
       "responseTimeMs": 1090,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-11T10:16:25.122Z",
       "httpStatus": 200,
       "responseTimeMs": 458,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-12T09:50:03.872Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1178,
       "reachable": true
     }
   ]
