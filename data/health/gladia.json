@@ -2,12 +2,6 @@
   "slug": "gladia",
   "entries": [
     {
-      "timestamp": "2026-06-14T12:30:25.548Z",
-      "httpStatus": 200,
-      "responseTimeMs": 611,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-15T20:00:23.953Z",
       "httpStatus": 200,
       "responseTimeMs": 798,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-12T09:51:10.610Z",
       "httpStatus": 200,
       "responseTimeMs": 1369,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-13T10:50:16.306Z",
+      "httpStatus": 200,
+      "responseTimeMs": 490,
       "reachable": true
     }
   ]
