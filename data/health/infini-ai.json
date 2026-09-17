@@ -2,12 +2,6 @@
   "slug": "infini-ai",
   "entries": [
     {
-      "timestamp": "2026-06-18T17:51:08.965Z",
-      "httpStatus": 200,
-      "responseTimeMs": 963,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-19T16:21:31.832Z",
       "httpStatus": 200,
       "responseTimeMs": 885,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-16T10:33:08.421Z",
       "httpStatus": 403,
       "responseTimeMs": 1864,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-17T10:43:03.434Z",
+      "httpStatus": 403,
+      "responseTimeMs": 1912,
       "reachable": true
     }
   ]

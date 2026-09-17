@@ -2,12 +2,6 @@
   "slug": "ai21",
   "entries": [
     {
-      "timestamp": "2026-06-18T17:49:45.581Z",
-      "httpStatus": 200,
-      "responseTimeMs": 311,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-19T16:20:05.472Z",
       "httpStatus": 200,
       "responseTimeMs": 266,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-16T10:31:43.402Z",
       "httpStatus": 200,
       "responseTimeMs": 228,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-17T10:41:41.665Z",
+      "httpStatus": 200,
+      "responseTimeMs": 210,
       "reachable": true
     }
   ]
