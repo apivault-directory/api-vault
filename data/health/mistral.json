@@ -2,12 +2,6 @@
   "slug": "mistral",
   "entries": [
     {
-      "timestamp": "2026-06-19T16:19:49.642Z",
-      "httpStatus": 200,
-      "responseTimeMs": 264,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-20T12:16:11.647Z",
       "httpStatus": 200,
       "responseTimeMs": 108,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-17T10:41:28.082Z",
       "httpStatus": 200,
       "responseTimeMs": 142,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-18T10:17:08.953Z",
+      "httpStatus": 200,
+      "responseTimeMs": 120,
       "reachable": true
     }
   ]
