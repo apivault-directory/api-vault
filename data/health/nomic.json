@@ -2,12 +2,6 @@
   "slug": "nomic",
   "entries": [
     {
-      "timestamp": "2026-06-23T16:12:51.769Z",
-      "httpStatus": 200,
-      "responseTimeMs": 114,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-24T13:56:14.405Z",
       "httpStatus": 200,
       "responseTimeMs": 48,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-21T11:30:47.575Z",
       "httpStatus": 200,
       "responseTimeMs": 175,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-22T10:38:13.441Z",
+      "httpStatus": 200,
+      "responseTimeMs": 195,
       "reachable": true
     }
   ]
