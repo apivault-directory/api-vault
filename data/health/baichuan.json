@@ -2,12 +2,6 @@
   "slug": "baichuan",
   "entries": [
     {
-      "timestamp": "2026-06-24T13:57:34.347Z",
-      "httpStatus": 200,
-      "responseTimeMs": 3564,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-25T13:40:46.167Z",
       "httpStatus": 200,
       "responseTimeMs": 3622,
@@ -540,6 +534,12 @@
       "httpStatus": 200,
       "responseTimeMs": 2032,
       "reachable": true
+    },
+    {
+      "timestamp": "2026-09-23T10:32:07.877Z",
+      "httpStatus": null,
+      "responseTimeMs": 505,
+      "reachable": false
     }
   ]
 }

@@ -2,12 +2,6 @@
   "slug": "modal",
   "entries": [
     {
-      "timestamp": "2026-06-24T13:55:46.470Z",
-      "httpStatus": 200,
-      "responseTimeMs": 47,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-25T13:38:59.056Z",
       "httpStatus": 200,
       "responseTimeMs": 57,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-22T10:37:52.511Z",
       "httpStatus": 200,
       "responseTimeMs": 223,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-23T10:30:17.714Z",
+      "httpStatus": 200,
+      "responseTimeMs": 80,
       "reachable": true
     }
   ]
