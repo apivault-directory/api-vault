@@ -2,12 +2,6 @@
   "slug": "voyage",
   "entries": [
     {
-      "timestamp": "2026-06-25T13:38:55.273Z",
-      "httpStatus": 200,
-      "responseTimeMs": 432,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-26T13:34:46.395Z",
       "httpStatus": 200,
       "responseTimeMs": 249,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-23T10:30:13.691Z",
       "httpStatus": 200,
       "responseTimeMs": 286,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-24T10:46:56.009Z",
+      "httpStatus": 200,
+      "responseTimeMs": 830,
       "reachable": true
     }
   ]
