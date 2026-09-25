@@ -2,12 +2,6 @@
   "slug": "moonshot",
   "entries": [
     {
-      "timestamp": "2026-06-26T13:35:04.639Z",
-      "httpStatus": 200,
-      "responseTimeMs": 2455,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-27T11:16:47.760Z",
       "httpStatus": 200,
       "responseTimeMs": 4276,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-24T10:47:16.110Z",
       "httpStatus": 200,
       "responseTimeMs": 2358,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-25T10:52:13.353Z",
+      "httpStatus": 200,
+      "responseTimeMs": 2169,
       "reachable": true
     }
   ]

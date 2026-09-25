@@ -2,12 +2,6 @@
   "slug": "together",
   "entries": [
     {
-      "timestamp": "2026-06-26T13:34:40.089Z",
-      "httpStatus": 200,
-      "responseTimeMs": 195,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-27T11:16:24.006Z",
       "httpStatus": 200,
       "responseTimeMs": 202,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-24T10:46:48.654Z",
       "httpStatus": 200,
       "responseTimeMs": 311,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-25T10:51:49.844Z",
+      "httpStatus": 200,
+      "responseTimeMs": 195,
       "reachable": true
     }
   ]
