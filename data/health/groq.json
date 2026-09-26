@@ -2,12 +2,6 @@
   "slug": "groq",
   "entries": [
     {
-      "timestamp": "2026-06-27T11:16:17.971Z",
-      "httpStatus": 200,
-      "responseTimeMs": 341,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-28T12:00:19.551Z",
       "httpStatus": 200,
       "responseTimeMs": 339,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-25T10:51:42.253Z",
       "httpStatus": 200,
       "responseTimeMs": 207,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-26T10:32:06.975Z",
+      "httpStatus": 200,
+      "responseTimeMs": 531,
       "reachable": true
     }
   ]

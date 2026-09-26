@@ -2,12 +2,6 @@
   "slug": "daytona",
   "entries": [
     {
-      "timestamp": "2026-06-27T11:18:38.395Z",
-      "httpStatus": 200,
-      "responseTimeMs": 165,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-28T12:02:39.074Z",
       "httpStatus": 200,
       "responseTimeMs": 111,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-25T10:53:52.567Z",
       "httpStatus": 200,
       "responseTimeMs": 406,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-26T10:34:27.739Z",
+      "httpStatus": 200,
+      "responseTimeMs": 328,
       "reachable": true
     }
   ]

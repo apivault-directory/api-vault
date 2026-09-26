@@ -2,12 +2,6 @@
   "slug": "playht",
   "entries": [
     {
-      "timestamp": "2026-06-27T11:16:59.602Z",
-      "httpStatus": 200,
-      "responseTimeMs": 328,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-28T12:01:00.139Z",
       "httpStatus": 200,
       "responseTimeMs": 300,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-25T10:52:19.973Z",
       "httpStatus": 200,
       "responseTimeMs": 409,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-26T10:32:48.856Z",
+      "httpStatus": 200,
+      "responseTimeMs": 657,
       "reachable": true
     }
   ]
