@@ -2,12 +2,6 @@
   "slug": "e2b",
   "entries": [
     {
-      "timestamp": "2026-06-29T17:16:09.093Z",
-      "httpStatus": 200,
-      "responseTimeMs": 746,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-06-30T12:35:01.110Z",
       "httpStatus": 200,
       "responseTimeMs": 725,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-27T11:06:15.580Z",
       "httpStatus": 200,
       "responseTimeMs": 239,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-28T12:27:07.204Z",
+      "httpStatus": 200,
+      "responseTimeMs": 72,
       "reachable": true
     }
   ]
