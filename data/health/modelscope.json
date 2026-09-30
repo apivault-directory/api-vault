@@ -2,12 +2,6 @@
   "slug": "modelscope",
   "entries": [
     {
-      "timestamp": "2026-07-01T13:59:40.965Z",
-      "httpStatus": 200,
-      "responseTimeMs": 948,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-02T12:34:44.378Z",
       "httpStatus": 200,
       "responseTimeMs": 891,
@@ -539,6 +533,12 @@
       "timestamp": "2026-09-29T11:52:31.708Z",
       "httpStatus": 200,
       "responseTimeMs": 3105,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-09-30T11:39:31.677Z",
+      "httpStatus": 200,
+      "responseTimeMs": 2623,
       "reachable": true
     }
   ]
