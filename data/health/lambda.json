@@ -2,12 +2,6 @@
   "slug": "lambda",
   "entries": [
     {
-      "timestamp": "2026-07-03T12:32:03.957Z",
-      "httpStatus": 200,
-      "responseTimeMs": 177,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-04T11:13:46.969Z",
       "httpStatus": 200,
       "responseTimeMs": 191,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-01T12:07:24.112Z",
       "httpStatus": 200,
       "responseTimeMs": 248,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-02T11:38:29.485Z",
+      "httpStatus": 200,
+      "responseTimeMs": 160,
       "reachable": true
     }
   ]

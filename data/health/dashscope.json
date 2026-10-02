@@ -2,12 +2,6 @@
   "slug": "dashscope",
   "entries": [
     {
-      "timestamp": "2026-07-03T12:31:04.575Z",
-      "httpStatus": 200,
-      "responseTimeMs": 2476,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-04T11:12:54.070Z",
       "httpStatus": 200,
       "responseTimeMs": 2017,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-01T12:06:31.806Z",
       "httpStatus": 200,
       "responseTimeMs": 2479,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-02T11:37:32.442Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1965,
       "reachable": true
     }
   ]
