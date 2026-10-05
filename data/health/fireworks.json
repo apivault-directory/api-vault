@@ -2,12 +2,6 @@
   "slug": "fireworks",
   "entries": [
     {
-      "timestamp": "2026-07-06T17:18:07.847Z",
-      "httpStatus": 200,
-      "responseTimeMs": 183,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-07T13:56:23.625Z",
       "httpStatus": 200,
       "responseTimeMs": 234,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-04T11:33:12.850Z",
       "httpStatus": 200,
       "responseTimeMs": 243,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-05T13:05:19.647Z",
+      "httpStatus": 200,
+      "responseTimeMs": 122,
       "reachable": true
     }
   ]

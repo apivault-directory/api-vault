@@ -2,12 +2,6 @@
   "slug": "jina",
   "entries": [
     {
-      "timestamp": "2026-07-06T17:18:07.063Z",
-      "httpStatus": 200,
-      "responseTimeMs": 71,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-07T13:56:22.791Z",
       "httpStatus": 200,
       "responseTimeMs": 144,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-04T11:33:12.006Z",
       "httpStatus": 200,
       "responseTimeMs": 166,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-05T13:05:18.924Z",
+      "httpStatus": 200,
+      "responseTimeMs": 37,
       "reachable": true
     }
   ]

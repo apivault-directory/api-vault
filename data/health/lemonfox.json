@@ -2,12 +2,6 @@
   "slug": "lemonfox",
   "entries": [
     {
-      "timestamp": "2026-07-06T17:18:14.325Z",
-      "httpStatus": 200,
-      "responseTimeMs": 222,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-07T13:56:30.611Z",
       "httpStatus": 200,
       "responseTimeMs": 590,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-04T11:33:20.604Z",
       "httpStatus": 200,
       "responseTimeMs": 315,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-05T13:05:25.600Z",
+      "httpStatus": 200,
+      "responseTimeMs": 153,
       "reachable": true
     }
   ]
