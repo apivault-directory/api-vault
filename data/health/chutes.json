@@ -2,12 +2,6 @@
   "slug": "chutes",
   "entries": [
     {
-      "timestamp": "2026-07-07T13:58:09.639Z",
-      "httpStatus": 200,
-      "responseTimeMs": 189,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-08T12:01:20.416Z",
       "httpStatus": 200,
       "responseTimeMs": 307,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-05T13:07:18.750Z",
       "httpStatus": 200,
       "responseTimeMs": 339,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-06T12:29:50.389Z",
+      "httpStatus": 200,
+      "responseTimeMs": 255,
       "reachable": true
     }
   ]
