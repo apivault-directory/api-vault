@@ -2,12 +2,6 @@
   "slug": "grok",
   "entries": [
     {
-      "timestamp": "2026-07-10T09:21:55.415Z",
-      "httpStatus": 200,
-      "responseTimeMs": 255,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-11T07:44:06.536Z",
       "httpStatus": 200,
       "responseTimeMs": 255,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-08T12:32:15.395Z",
       "httpStatus": 200,
       "responseTimeMs": 229,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-09T12:20:58.298Z",
+      "httpStatus": 200,
+      "responseTimeMs": 248,
       "reachable": true
     }
   ]
