@@ -2,12 +2,6 @@
   "slug": "viktor",
   "entries": [
     {
-      "timestamp": "2026-07-15T07:54:34.090Z",
-      "httpStatus": 200,
-      "responseTimeMs": 430,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-16T08:00:15.167Z",
       "httpStatus": 200,
       "responseTimeMs": 499,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-13T13:15:35.794Z",
       "httpStatus": 200,
       "responseTimeMs": 374,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-14T10:54:37.532Z",
+      "httpStatus": 200,
+      "responseTimeMs": 361,
       "reachable": true
     }
   ]
