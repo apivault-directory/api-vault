@@ -2,12 +2,6 @@
   "slug": "openrouter",
   "entries": [
     {
-      "timestamp": "2026-07-16T07:57:24.932Z",
-      "httpStatus": 200,
-      "responseTimeMs": 175,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-17T07:53:21.895Z",
       "httpStatus": 200,
       "responseTimeMs": 128,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-14T10:53:05.505Z",
       "httpStatus": 200,
       "responseTimeMs": 90,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-15T10:35:37.746Z",
+      "httpStatus": 200,
+      "responseTimeMs": 175,
       "reachable": true
     }
   ]
