@@ -2,12 +2,6 @@
   "slug": "novita",
   "entries": [
     {
-      "timestamp": "2026-07-17T07:53:43.923Z",
-      "httpStatus": 200,
-      "responseTimeMs": 437,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-18T07:29:09.417Z",
       "httpStatus": 200,
       "responseTimeMs": 388,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-15T10:35:58.673Z",
       "httpStatus": 200,
       "responseTimeMs": 404,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-16T10:22:30.683Z",
+      "httpStatus": 200,
+      "responseTimeMs": 497,
       "reachable": true
     }
   ]
