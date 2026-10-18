@@ -2,12 +2,6 @@
   "slug": "replicate",
   "entries": [
     {
-      "timestamp": "2026-07-19T08:01:03.804Z",
-      "httpStatus": 200,
-      "responseTimeMs": 262,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-20T08:42:31.061Z",
       "httpStatus": 200,
       "responseTimeMs": 342,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-17T09:55:15.256Z",
       "httpStatus": 200,
       "responseTimeMs": 399,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-18T10:07:31.310Z",
+      "httpStatus": 200,
+      "responseTimeMs": 314,
       "reachable": true
     }
   ]
