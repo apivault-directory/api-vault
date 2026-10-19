@@ -2,12 +2,6 @@
   "slug": "minimax",
   "entries": [
     {
-      "timestamp": "2026-07-20T08:43:57.212Z",
-      "httpStatus": 200,
-      "responseTimeMs": 4219,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-21T08:11:03.643Z",
       "httpStatus": 200,
       "responseTimeMs": 4366,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-18T10:08:26.886Z",
       "httpStatus": 200,
       "responseTimeMs": 5044,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-19T11:38:30.325Z",
+      "httpStatus": 200,
+      "responseTimeMs": 5591,
       "reachable": true
     }
   ]

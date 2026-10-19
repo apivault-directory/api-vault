@@ -2,12 +2,6 @@
   "slug": "perplexity",
   "entries": [
     {
-      "timestamp": "2026-07-20T08:42:38.229Z",
-      "httpStatus": 200,
-      "responseTimeMs": 427,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-21T08:09:39.743Z",
       "httpStatus": 200,
       "responseTimeMs": 227,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-18T10:07:37.967Z",
       "httpStatus": 200,
       "responseTimeMs": 334,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-19T11:37:37.441Z",
+      "httpStatus": 200,
+      "responseTimeMs": 267,
       "reachable": true
     }
   ]
