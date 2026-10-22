@@ -2,12 +2,6 @@
   "slug": "assemblyai",
   "entries": [
     {
-      "timestamp": "2026-07-23T08:13:17.892Z",
-      "httpStatus": 200,
-      "responseTimeMs": 172,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-24T08:09:41.406Z",
       "httpStatus": 200,
       "responseTimeMs": 159,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-21T10:52:13.911Z",
       "httpStatus": 200,
       "responseTimeMs": 112,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-22T10:53:13.613Z",
+      "httpStatus": 200,
+      "responseTimeMs": 195,
       "reachable": true
     }
   ]
