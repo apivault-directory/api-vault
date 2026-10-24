@@ -2,12 +2,6 @@
   "slug": "baidu-wenxin",
   "entries": [
     {
-      "timestamp": "2026-07-25T07:53:40.666Z",
-      "httpStatus": 200,
-      "responseTimeMs": 3847,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-26T08:11:40.560Z",
       "httpStatus": 200,
       "responseTimeMs": 1655,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-23T10:45:15.355Z",
       "httpStatus": 200,
       "responseTimeMs": 2830,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-24T10:01:39.348Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1565,
       "reachable": true
     }
   ]
