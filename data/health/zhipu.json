@@ -2,12 +2,6 @@
   "slug": "zhipu",
   "entries": [
     {
-      "timestamp": "2026-07-28T08:17:07.735Z",
-      "httpStatus": 200,
-      "responseTimeMs": 1219,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-29T08:23:04.559Z",
       "httpStatus": 200,
       "responseTimeMs": 750,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-26T11:55:19.334Z",
       "httpStatus": 200,
       "responseTimeMs": 538,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-27T11:18:10.843Z",
+      "httpStatus": 200,
+      "responseTimeMs": 457,
       "reachable": true
     }
   ]
