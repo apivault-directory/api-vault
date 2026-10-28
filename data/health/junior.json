@@ -2,12 +2,6 @@
   "slug": "junior",
   "entries": [
     {
-      "timestamp": "2026-07-29T08:24:46.075Z",
-      "httpStatus": 200,
-      "responseTimeMs": 308,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-07-30T08:11:36.444Z",
       "httpStatus": 200,
       "responseTimeMs": 262,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-27T11:19:25.145Z",
       "httpStatus": 200,
       "responseTimeMs": 330,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-28T11:53:30.522Z",
+      "httpStatus": 200,
+      "responseTimeMs": 590,
       "reachable": true
     }
   ]
