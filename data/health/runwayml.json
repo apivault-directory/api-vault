@@ -2,12 +2,6 @@
   "slug": "runwayml",
   "entries": [
     {
-      "timestamp": "2026-07-31T08:36:48.736Z",
-      "httpStatus": 200,
-      "responseTimeMs": 180,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-02T08:07:43.406Z",
       "httpStatus": 200,
       "responseTimeMs": 178,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-29T12:00:10.301Z",
       "httpStatus": 200,
       "responseTimeMs": 116,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-10-30T11:53:55.896Z",
+      "httpStatus": 200,
+      "responseTimeMs": 56,
       "reachable": true
     }
   ]

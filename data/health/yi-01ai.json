@@ -2,12 +2,6 @@
   "slug": "yi-01ai",
   "entries": [
     {
-      "timestamp": "2026-07-31T08:38:22.213Z",
-      "httpStatus": 200,
-      "responseTimeMs": 5107,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-02T08:09:03.614Z",
       "httpStatus": 200,
       "responseTimeMs": 1575,
@@ -540,6 +534,12 @@
       "httpStatus": 200,
       "responseTimeMs": 1302,
       "reachable": true
+    },
+    {
+      "timestamp": "2026-10-30T11:55:19.606Z",
+      "httpStatus": null,
+      "responseTimeMs": 20000,
+      "reachable": false
     }
   ]
 }
