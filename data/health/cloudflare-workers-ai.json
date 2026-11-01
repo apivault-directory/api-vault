@@ -2,12 +2,6 @@
   "slug": "cloudflare-workers-ai",
   "entries": [
     {
-      "timestamp": "2026-08-03T09:24:15.594Z",
-      "httpStatus": 200,
-      "responseTimeMs": 35,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-04T08:23:25.118Z",
       "httpStatus": 200,
       "responseTimeMs": 48,
@@ -539,6 +533,12 @@
       "timestamp": "2026-10-31T11:27:59.305Z",
       "httpStatus": 200,
       "responseTimeMs": 57,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-01T12:22:27.050Z",
+      "httpStatus": 200,
+      "responseTimeMs": 44,
       "reachable": true
     }
   ]
