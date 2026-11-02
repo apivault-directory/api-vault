@@ -2,12 +2,6 @@
   "slug": "fal",
   "entries": [
     {
-      "timestamp": "2026-08-04T08:23:08.571Z",
-      "httpStatus": 429,
-      "responseTimeMs": 79,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-05T08:19:25.820Z",
       "httpStatus": 429,
       "responseTimeMs": 180,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-01T12:22:07.622Z",
       "httpStatus": 200,
       "responseTimeMs": 110,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-02T14:16:45.194Z",
+      "httpStatus": 200,
+      "responseTimeMs": 185,
       "reachable": true
     }
   ]
