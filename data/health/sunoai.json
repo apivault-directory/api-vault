@@ -2,12 +2,6 @@
   "slug": "sunoai",
   "entries": [
     {
-      "timestamp": "2026-08-05T08:20:49.857Z",
-      "httpStatus": 200,
-      "responseTimeMs": 240,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-06T08:18:22.392Z",
       "httpStatus": 200,
       "responseTimeMs": 376,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-02T14:17:37.115Z",
       "httpStatus": 200,
       "responseTimeMs": 186,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-03T13:19:53.467Z",
+      "httpStatus": 200,
+      "responseTimeMs": 167,
       "reachable": true
     }
   ]

@@ -2,12 +2,6 @@
   "slug": "stepfun",
   "entries": [
     {
-      "timestamp": "2026-08-05T08:21:03.204Z",
-      "httpStatus": 200,
-      "responseTimeMs": 4948,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-06T08:18:33.384Z",
       "httpStatus": 200,
       "responseTimeMs": 5340,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-02T14:17:45.851Z",
       "httpStatus": 200,
       "responseTimeMs": 1709,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-03T13:20:00.820Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1839,
       "reachable": true
     }
   ]
