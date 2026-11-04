@@ -2,12 +2,6 @@
   "slug": "tavily",
   "entries": [
     {
-      "timestamp": "2026-08-06T08:17:34.821Z",
-      "httpStatus": 200,
-      "responseTimeMs": 239,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-07T07:02:16.158Z",
       "httpStatus": 200,
       "responseTimeMs": 247,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-03T13:19:46.971Z",
       "httpStatus": 200,
       "responseTimeMs": 183,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-04T13:31:18.128Z",
+      "httpStatus": 200,
+      "responseTimeMs": 163,
       "reachable": true
     }
   ]
