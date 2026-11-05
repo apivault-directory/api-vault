@@ -2,12 +2,6 @@
   "slug": "sensenova",
   "entries": [
     {
-      "timestamp": "2026-08-07T07:04:04.238Z",
-      "httpStatus": 200,
-      "responseTimeMs": 1255,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-08T06:37:46.334Z",
       "httpStatus": 200,
       "responseTimeMs": 2328,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-04T13:32:04.741Z",
       "httpStatus": 200,
       "responseTimeMs": 845,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-05T13:46:19.711Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1382,
       "reachable": true
     }
   ]

@@ -2,12 +2,6 @@
   "slug": "lumaai",
   "entries": [
     {
-      "timestamp": "2026-08-07T07:02:15.311Z",
-      "httpStatus": 200,
-      "responseTimeMs": 9799,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-08T06:36:19.116Z",
       "httpStatus": 200,
       "responseTimeMs": 1102,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-04T13:31:17.365Z",
       "httpStatus": 200,
       "responseTimeMs": 592,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-05T13:45:34.814Z",
+      "httpStatus": 200,
+      "responseTimeMs": 588,
       "reachable": true
     }
   ]
