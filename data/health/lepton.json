@@ -2,12 +2,6 @@
   "slug": "lepton",
   "entries": [
     {
-      "timestamp": "2026-08-08T06:36:20.639Z",
-      "httpStatus": 200,
-      "responseTimeMs": 183,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-09T06:40:10.850Z",
       "httpStatus": 200,
       "responseTimeMs": 276,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-05T13:45:37.721Z",
       "httpStatus": null,
       "responseTimeMs": 245,
+      "reachable": false
+    },
+    {
+      "timestamp": "2026-11-06T13:29:43.752Z",
+      "httpStatus": null,
+      "responseTimeMs": 120,
       "reachable": false
     }
   ]
