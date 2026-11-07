@@ -2,12 +2,6 @@
   "slug": "glhf",
   "entries": [
     {
-      "timestamp": "2026-08-09T06:40:52.453Z",
-      "httpStatus": null,
-      "responseTimeMs": 20001,
-      "reachable": false
-    },
-    {
       "timestamp": "2026-08-10T07:14:02.627Z",
       "httpStatus": null,
       "responseTimeMs": 20004,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-06T13:29:44.590Z",
       "httpStatus": 526,
       "responseTimeMs": 236,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-07T12:09:18.730Z",
+      "httpStatus": 526,
+      "responseTimeMs": 198,
       "reachable": true
     }
   ]

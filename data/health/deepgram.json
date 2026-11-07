@@ -2,12 +2,6 @@
   "slug": "deepgram",
   "entries": [
     {
-      "timestamp": "2026-08-09T06:39:25.906Z",
-      "httpStatus": 200,
-      "responseTimeMs": 226,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-10T07:12:47.125Z",
       "httpStatus": 200,
       "responseTimeMs": 99,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-06T13:28:58.306Z",
       "httpStatus": 200,
       "responseTimeMs": 688,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-07T12:08:33.534Z",
+      "httpStatus": 200,
+      "responseTimeMs": 309,
       "reachable": true
     }
   ]
