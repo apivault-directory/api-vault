@@ -2,12 +2,6 @@
   "slug": "leonardo",
   "entries": [
     {
-      "timestamp": "2026-08-12T07:10:22.525Z",
-      "httpStatus": 200,
-      "responseTimeMs": 840,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-13T07:14:11.947Z",
       "httpStatus": 200,
       "responseTimeMs": 563,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-09T14:44:50.017Z",
       "httpStatus": 200,
       "responseTimeMs": 474,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-10T13:59:39.347Z",
+      "httpStatus": 200,
+      "responseTimeMs": 375,
       "reachable": true
     }
   ]

@@ -2,12 +2,6 @@
   "slug": "writer",
   "entries": [
     {
-      "timestamp": "2026-08-12T07:11:37.204Z",
-      "httpStatus": 200,
-      "responseTimeMs": 228,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-13T07:15:27.133Z",
       "httpStatus": 200,
       "responseTimeMs": 342,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-09T14:45:27.247Z",
       "httpStatus": 200,
       "responseTimeMs": 902,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-10T14:00:27.073Z",
+      "httpStatus": 200,
+      "responseTimeMs": 403,
       "reachable": true
     }
   ]
