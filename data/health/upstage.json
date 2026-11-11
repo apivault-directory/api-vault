@@ -2,12 +2,6 @@
   "slug": "upstage",
   "entries": [
     {
-      "timestamp": "2026-08-13T07:14:32.709Z",
-      "httpStatus": 200,
-      "responseTimeMs": 883,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-14T07:11:09.595Z",
       "httpStatus": 200,
       "responseTimeMs": 1224,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-10T14:00:14.035Z",
       "httpStatus": 200,
       "responseTimeMs": 937,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-11T13:15:33.197Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1130,
       "reachable": true
     }
   ]
