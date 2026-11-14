@@ -2,12 +2,6 @@
   "slug": "coworker",
   "entries": [
     {
-      "timestamp": "2026-08-16T06:25:17.406Z",
-      "httpStatus": 200,
-      "responseTimeMs": 130,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-17T06:36:51.853Z",
       "httpStatus": 200,
       "responseTimeMs": 207,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-13T13:41:35.306Z",
       "httpStatus": 200,
       "responseTimeMs": 118,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-14T12:45:52.208Z",
+      "httpStatus": 200,
+      "responseTimeMs": 188,
       "reachable": true
     }
   ]

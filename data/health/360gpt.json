@@ -2,12 +2,6 @@
   "slug": "360gpt",
   "entries": [
     {
-      "timestamp": "2026-08-16T06:26:29.016Z",
-      "httpStatus": 200,
-      "responseTimeMs": 1266,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-17T06:37:21.779Z",
       "httpStatus": 200,
       "responseTimeMs": 1455,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-13T13:42:14.108Z",
       "httpStatus": 200,
       "responseTimeMs": 1334,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-14T12:46:32.730Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1239,
       "reachable": true
     }
   ]
