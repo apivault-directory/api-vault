@@ -2,12 +2,6 @@
   "slug": "gemini",
   "entries": [
     {
-      "timestamp": "2026-08-17T06:35:22.979Z",
-      "httpStatus": 200,
-      "responseTimeMs": 225,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-18T06:27:12.901Z",
       "httpStatus": 200,
       "responseTimeMs": 434,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-14T12:44:59.588Z",
       "httpStatus": 200,
       "responseTimeMs": 960,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-15T13:11:54.874Z",
+      "httpStatus": 200,
+      "responseTimeMs": 698,
       "reachable": true
     }
   ]
