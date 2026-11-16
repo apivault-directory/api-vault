@@ -2,12 +2,6 @@
   "slug": "stability",
   "entries": [
     {
-      "timestamp": "2026-08-18T06:27:09.545Z",
-      "httpStatus": 200,
-      "responseTimeMs": 83,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-19T06:28:00.638Z",
       "httpStatus": 200,
       "responseTimeMs": 141,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-15T13:11:50.761Z",
       "httpStatus": 200,
       "responseTimeMs": 93,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-16T14:21:02.208Z",
+      "httpStatus": 200,
+      "responseTimeMs": 53,
       "reachable": true
     }
   ]

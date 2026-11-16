@@ -2,12 +2,6 @@
   "slug": "cerebras",
   "entries": [
     {
-      "timestamp": "2026-08-18T06:27:13.667Z",
-      "httpStatus": 200,
-      "responseTimeMs": 165,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-19T06:28:05.204Z",
       "httpStatus": 200,
       "responseTimeMs": 164,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-15T13:11:55.628Z",
       "httpStatus": 200,
       "responseTimeMs": 153,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-16T14:21:06.632Z",
+      "httpStatus": 200,
+      "responseTimeMs": 137,
       "reachable": true
     }
   ]
