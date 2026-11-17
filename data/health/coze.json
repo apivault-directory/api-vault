@@ -2,12 +2,6 @@
   "slug": "coze",
   "entries": [
     {
-      "timestamp": "2026-08-19T06:29:55.473Z",
-      "httpStatus": 200,
-      "responseTimeMs": 689,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-20T06:31:47.899Z",
       "httpStatus": 200,
       "responseTimeMs": 432,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-16T14:22:32.170Z",
       "httpStatus": 200,
       "responseTimeMs": 944,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-17T15:14:15.010Z",
+      "httpStatus": 200,
+      "responseTimeMs": 731,
       "reachable": true
     }
   ]
