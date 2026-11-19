@@ -2,12 +2,6 @@
   "slug": "google-tts",
   "entries": [
     {
-      "timestamp": "2026-08-21T06:31:55.962Z",
-      "httpStatus": 200,
-      "responseTimeMs": 119,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-22T06:24:53.502Z",
       "httpStatus": 200,
       "responseTimeMs": 272,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-18T14:51:30.369Z",
       "httpStatus": 200,
       "responseTimeMs": 188,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-19T14:57:25.563Z",
+      "httpStatus": 200,
+      "responseTimeMs": 150,
       "reachable": true
     }
   ]
