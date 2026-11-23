@@ -2,12 +2,6 @@
   "slug": "iflytek-spark",
   "entries": [
     {
-      "timestamp": "2026-08-25T06:32:05.188Z",
-      "httpStatus": 200,
-      "responseTimeMs": 3974,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-26T06:34:12.259Z",
       "httpStatus": 200,
       "responseTimeMs": 1446,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-22T13:49:40.087Z",
       "httpStatus": 200,
       "responseTimeMs": 2041,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-23T16:55:28.702Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1445,
       "reachable": true
     }
   ]
