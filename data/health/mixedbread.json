@@ -2,12 +2,6 @@
   "slug": "mixedbread",
   "entries": [
     {
-      "timestamp": "2026-08-26T06:33:49.832Z",
-      "httpStatus": 200,
-      "responseTimeMs": 348,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-27T17:09:47.208Z",
       "httpStatus": 200,
       "responseTimeMs": 377,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-23T16:55:08.327Z",
       "httpStatus": 200,
       "responseTimeMs": 427,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-24T16:44:48.634Z",
+      "httpStatus": 200,
+      "responseTimeMs": 255,
       "reachable": true
     }
   ]
