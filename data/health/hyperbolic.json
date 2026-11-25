@@ -2,12 +2,6 @@
   "slug": "hyperbolic",
   "entries": [
     {
-      "timestamp": "2026-08-27T17:10:18.445Z",
-      "httpStatus": 200,
-      "responseTimeMs": 405,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-28T17:57:16.661Z",
       "httpStatus": 200,
       "responseTimeMs": 1059,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-24T16:45:16.912Z",
       "httpStatus": 200,
       "responseTimeMs": 927,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-25T16:31:37.193Z",
+      "httpStatus": 200,
+      "responseTimeMs": 1513,
       "reachable": true
     }
   ]
