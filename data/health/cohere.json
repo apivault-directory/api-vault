@@ -2,12 +2,6 @@
   "slug": "cohere",
   "entries": [
     {
-      "timestamp": "2026-08-29T11:59:59.162Z",
-      "httpStatus": 200,
-      "responseTimeMs": 84,
-      "reachable": true
-    },
-    {
       "timestamp": "2026-08-30T10:56:55.302Z",
       "httpStatus": 200,
       "responseTimeMs": 131,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-26T16:03:41.013Z",
       "httpStatus": 200,
       "responseTimeMs": 334,
+      "reachable": true
+    },
+    {
+      "timestamp": "2026-11-27T15:52:06.739Z",
+      "httpStatus": 200,
+      "responseTimeMs": 344,
       "reachable": true
     }
   ]

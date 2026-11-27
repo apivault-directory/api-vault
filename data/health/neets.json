@@ -2,12 +2,6 @@
   "slug": "neets",
   "entries": [
     {
-      "timestamp": "2026-08-29T12:00:19.685Z",
-      "httpStatus": null,
-      "responseTimeMs": 465,
-      "reachable": false
-    },
-    {
       "timestamp": "2026-08-30T10:57:22.213Z",
       "httpStatus": null,
       "responseTimeMs": 301,
@@ -539,6 +533,12 @@
       "timestamp": "2026-11-26T16:04:01.742Z",
       "httpStatus": null,
       "responseTimeMs": 477,
+      "reachable": false
+    },
+    {
+      "timestamp": "2026-11-27T15:52:29.962Z",
+      "httpStatus": null,
+      "responseTimeMs": 416,
       "reachable": false
     }
   ]
